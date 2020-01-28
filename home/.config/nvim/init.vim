@@ -1,25 +1,23 @@
 "################################################################################
 "# Neovim Configuration
 "################################################################################
-"
-" Requirements
+
+" Requirements {{{
 " - vim-plug
 " - fzf
 " - git
-
-"################################################################################
-"# Plugins
-"################################################################################
-
+" }}}
+" Plugins {{{
 call plug#begin(stdpath('data'). '/plugged')
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf.vim'
+Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -27,20 +25,18 @@ Plug 'Yggdroot/indentLine'
 " Always load the vim-devicons last!
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
-
-"################################################################################
-"# General Settings
-"################################################################################
-
+" }}}
+" General Settings {{{
 set clipboard=unnamed
+set mouse=n
 set number
 set relativenumber
-" set foldmethod=indent
-
-"################################################################################
-"# Visual Settings
-"################################################################################
-
+" organize init.vim with folds
+set foldmethod=marker
+set foldlevel=0
+set modelines=1
+" }}}
+" Visual Settings {{{
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='hard'
 let g:airline_theme = 'gruvbox'
@@ -49,11 +45,8 @@ set termguicolors
 set noshowmode
 " Setting transparent background
 hi Normal guibg=NONE ctermbg=NONE
-
-"################################################################################
-"# Shortcuts and Leader Settings
-"################################################################################
-
+" }}}
+" Shortcuts and Leader Settings {{{
 let mapleader=","	" leader is comma
 " exit insert or visual mode with jk
 inoremap jk <esc>
@@ -70,6 +63,8 @@ nnoremap <leader>x :bd<CR>
 nnoremap <leader>z :%bd<CR>
 " exit vim
 nnoremap <silent><leader>q :q<CR>
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
 
 " vim-go specific shortcuts
 " browse errors
@@ -81,22 +76,13 @@ nnoremap <leader>a :cclose<CR>
 " build or run Go program
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
-
-"################################################################################
-"# Plugin Configurations
-"################################################################################
-
-" defx
-let g:defx_icons_enable_syntax_highlight = 1
-
+" }}}
+" Plugin Configurations {{{
 " vim-go
 " only use quickfix window
 let g:go_list_type = "quickfix"
-
-"################################################################################
-"# Coc Configurations
-"################################################################################
-
+" }}}
+" Coc Configurations {{{
 " if hidden is not set, TextEdit might fail.
 set hidden
 
@@ -125,3 +111,5 @@ function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+" }}}
+" vim:foldmethod=marker:foldlevel=0
