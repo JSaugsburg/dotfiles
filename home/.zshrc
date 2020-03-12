@@ -20,7 +20,7 @@ eval "$(hub alias -s)"
 ZSH_THEME="spaceship"
 
 # spaceship settings
-#SPACESHIP_PROMPT_ADD_NEWLINE="false"
+SPACESHIP_PROMPT_ADD_NEWLINE="false"
 SPACESHIP_PROMPT_SEPARATE_LINE="false"
 SPACESHIP_PROMPT_ADD_LINE="false"
 SPACESHIP_VENV_SYMBOL="🐍 "

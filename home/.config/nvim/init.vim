@@ -15,7 +15,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf.vim'
 Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
@@ -31,16 +33,32 @@ set clipboard=unnamed
 set mouse=n
 set number
 set relativenumber
+" folding
+set foldenable " enable folding
 " organize init.vim with folds
-set foldmethod=marker
+set foldmethod=indent
+set foldlevelstart=10
 set foldlevel=0
 set modelines=1
 " }}}
 " Visual Settings {{{
-colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
-let g:airline_theme = 'gruvbox'
-set termguicolors
+syntax on
+colorscheme onedark
+let g:airline_theme = 'onedark'
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+  set termguicolors
+endif
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark='hard'
+" let g:airline_theme = 'gruvbox'
+" set termguicolors
 " disable default mode indicator
 set noshowmode
 " Setting transparent background
@@ -89,6 +107,9 @@ set hidden
 " Some servers have issues with backup files
 set nobackup
 set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
 
 " Remove messages from in-completion menus
 set shortmess+=c
