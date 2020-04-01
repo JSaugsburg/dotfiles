@@ -11,7 +11,8 @@
 call plug#begin(stdpath('data'). '/plugged')
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf.vim'
 Plug 'kassio/neoterm'
 Plug 'mhinz/vim-startify'
@@ -99,6 +100,12 @@ autocmd FileType go nmap <leader>r <Plug>(go-run)
 " vim-go
 " only use quickfix window
 let g:go_list_type = "quickfix"
+" vim-slime
+" set tmux as default target
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{top-right}"}
+let g:slime_python_ipython = 1
+nnoremap <C-c> :SlimeSendCurrentLine<CR>
 " }}}
 " Coc Configurations {{{
 " if hidden is not set, TextEdit might fail.
