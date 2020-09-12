@@ -1,5 +1,0 @@
-2020/09/11-21:35:54.217 5940 Reusing MANIFEST /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/09/11-21:36:26.234 59de Level-0 table #5: started
-2020/09/11-21:36:26.235 59de Level-0 table #5: 1240 bytes OK
-2020/09/11-21:36:26.237 59de Delete type=0 #3
-2020/09/11-21:36:26.237 59de Manual compaction at level-0 from (begin) .. (end); will stop at (end)

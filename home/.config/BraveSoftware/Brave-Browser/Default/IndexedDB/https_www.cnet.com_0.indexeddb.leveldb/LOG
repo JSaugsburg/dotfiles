@@ -1,5 +1,0 @@
-2020/08/20-20:15:26.876 9c8 Reusing MANIFEST /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.cnet.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/08/20-20:19:16.872 86c Level-0 table #5: started
-2020/08/20-20:19:16.875 86c Level-0 table #5: 1562 bytes OK
-2020/08/20-20:19:16.876 86c Delete type=0 #3
-2020/08/20-20:19:16.876 86c Manual compaction at level-0 from (begin) .. (end); will stop at (end)

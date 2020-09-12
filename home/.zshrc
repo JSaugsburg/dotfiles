@@ -5,10 +5,10 @@
 export ZSH="/home/sepp/.oh-my-zsh"
 
 # automatically start tmux
-if [ -z "$TMUX" ]
-then
-    tmux attach -t TMUX || tmux new -s TMUX
-fi
+#if [ -z "$TMUX" ]
+#then
+#    tmux attach -t TMUX || tmux new -s TMUX
+#fi
 
 # Wrap git automatically by adding the following to ~/.zshrc:
 eval "$(hub alias -s)"
@@ -88,8 +88,8 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(tmux zsh-syntax-highlighting)
-
+plugins=(tmux archlinux zsh-syntax-highlighting)
+# zsh-nvm zsh-autosuggestions
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -104,11 +104,14 @@ source /usr/share/fzf/completion.zsh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+else
+   export EDITOR='vim'
+fi
+
+# use nvim as manpager
+export MANPAGER="nvim -c 'set ft=man' -"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -122,5 +125,16 @@ source /usr/share/fzf/completion.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
+alias icat="kitty +kitten icat"
 
+# add doom emacs to path
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+export PAUSED="true"
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+PATH="/home/sepp/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/sepp/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/sepp/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/sepp/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/sepp/perl5"; export PERL_MM_OPT;

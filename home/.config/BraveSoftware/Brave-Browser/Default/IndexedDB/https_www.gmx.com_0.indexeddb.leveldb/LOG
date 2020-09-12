@@ -1,5 +1,0 @@
-2020/08/22-13:32:16.152 4877 Reusing MANIFEST /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.gmx.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/08/22-13:33:23.721 cfa Level-0 table #5: started
-2020/08/22-13:33:23.723 cfa Level-0 table #5: 26213 bytes OK
-2020/08/22-13:33:23.724 cfa Delete type=0 #3
-2020/08/22-13:33:23.724 cfa Manual compaction at level-0 from (begin) .. (end); will stop at (end)

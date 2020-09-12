@@ -1,7 +1,0 @@
-{
-   "description": "Brave User Model Installer Component",
-   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw6fYL/onqsR2Eqr2lif68RY8/KSB9e0r6rOXlo6qclUckngboamWnQGZnW8LNrN7fyVjUnsK0OCLzRkOEyEm3hOnmUlROYgk2NvSIzrAhq5PA8M2xc9siU00myQ+IOhbVcNDSOxpbrX9w3e6rA9MwrytywGtL58nDWyOcFgMwfkzQHfxVxeu/rkQODkNEgXZl2t9Jd+1eHCSfleuJeNVfb9OaZ1rjVWwETHwk+Y3w2LHcS2JtFXcA7O9QI/w+s4uYGMogZKwrZG7sYZtAftOOERPrSFJDux/MNjVtm8Rpk0ZWFRIUmVWf6PnFbX6UjtJY2qAN0Nsq27TNvVKCpdz5wIDAQAB",
-   "manifest_version": 2,
-   "name": "Brave User Model Installer",
-   "version": "1.0.3"
-}
