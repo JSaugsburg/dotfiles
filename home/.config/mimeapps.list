@@ -1,0 +1,16 @@
+[Added Associations]
+inode/directory=org.kde.dolphin.desktop;kfmclient_dir.desktop;
+video/mp4=vlc.desktop;
+x-scheme-handler/mailto=opera.desktop;
+
+[Default Applications]
+inode/directory=org.kde.dolphin.desktop;
+text/html=brave-browser.desktop
+video/mp4=vlc.desktop;
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/kite=kite-copilot.desktop
+x-scheme-handler/mailto=opera.desktop;
+x-scheme-handler/webcal=opera.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop

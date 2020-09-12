@@ -1,0 +1,21 @@
+{
+  "snippets": {
+    "%2Fhome%2Fsepp%2Fprojects%2Fwohnungsmarkt": [
+      "help"
+    ]
+  },
+  "marketplace": {
+    "%2Fhome%2Fsepp%2Fprojects%2Fwohnungsmarkt": [
+      "q"
+    ],
+    "%2Fhome%2Fsepp%2Fprojects%2Fjs_wohnungsmarkt": [
+      "Ul",
+      "q"
+    ]
+  },
+  "lists": {
+    "%2Fhome%2Fsepp%2Fprojects%2Fjs_wohnungsmarkt": [
+      "ma"
+    ]
+  }
+}

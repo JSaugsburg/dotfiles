@@ -1,0 +1,9 @@
+[General]
+FireOnClick=true
+
+[KgTheme]
+Theme=themes/default.desktop
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAAAAAu4AAAHSAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled

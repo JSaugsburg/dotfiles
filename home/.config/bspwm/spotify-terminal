@@ -1,0 +1,4 @@
+#!/bin/bash
+
+bspc rule -a kitty desktop='^6' follow=on --one-shot
+kitty -e spt &

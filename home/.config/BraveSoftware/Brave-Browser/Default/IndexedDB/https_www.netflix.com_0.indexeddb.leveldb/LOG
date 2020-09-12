@@ -1,0 +1,21 @@
+2020/09/12-19:01:09.173 413 Reusing MANIFEST /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.netflix.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/09/12-19:01:09.173 413 Recovering log #254
+2020/09/12-19:01:09.198 413 Reusing old log /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.netflix.com_0.indexeddb.leveldb/000254.log 
+2020/09/12-19:12:18.112 d8a Level-0 table #259: started
+2020/09/12-19:12:18.134 d8a Level-0 table #259: 2280718 bytes OK
+2020/09/12-19:12:18.137 d8a Delete type=0 #254
+2020/09/12-19:18:51.136 d8a Compacting 1@1 + 1@2 files
+2020/09/12-19:18:51.144 d8a Generated table #260@1: 37 keys, 12653 bytes
+2020/09/12-19:18:51.144 d8a Compacted 1@1 + 1@2 files => 12653 bytes
+2020/09/12-19:18:51.146 d8a compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/09/12-19:18:51.146 d8a Delete type=2 #259
+2020/09/12-19:18:51.146 d8a Delete type=2 #256
+2020/09/12-20:10:15.823 d8a Level-0 table #262: started
+2020/09/12-20:10:15.846 d8a Level-0 table #262: 2218969 bytes OK
+2020/09/12-20:10:15.848 d8a Delete type=0 #258
+2020/09/12-20:16:35.826 d8a Compacting 1@1 + 1@2 files
+2020/09/12-20:16:35.835 d8a Generated table #263@1: 37 keys, 12598 bytes
+2020/09/12-20:16:35.835 d8a Compacted 1@1 + 1@2 files => 12598 bytes
+2020/09/12-20:16:35.836 d8a compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/09/12-20:16:35.836 d8a Delete type=2 #260
+2020/09/12-20:16:35.836 d8a Delete type=2 #262

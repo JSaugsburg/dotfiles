@@ -1,0 +1,15 @@
+2020/08/23-18:56:58.094 d9a Reusing MANIFEST /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.imdb.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/23-18:56:58.094 d9a Recovering log #39
+2020/08/23-18:56:58.094 d9a Reusing old log /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.imdb.com_0.indexeddb.leveldb/000039.log 
+2020/08/23-18:57:01.779 da7 Level-0 table #44: started
+2020/08/23-18:57:01.783 da7 Level-0 table #44: 536 bytes OK
+2020/08/23-18:57:01.785 da7 Delete type=0 #39
+2020/08/23-18:57:01.785 da7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/08/23-18:57:01.785 da7 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x1f\x03\x00\xf0\xa8u\xc7AwB\x00\x01\x14\x00F\x00C\x00S\x00B\x00Z\x00D\x001\x006\x00N\x003\x007\x00Y\x003\x004\x000\x005\x00W\x00M\x00N\x00Y' @ 252 : 1
+2020/08/23-18:57:01.785 da7 Compacting 1@1 + 1@2 files
+2020/08/23-18:57:01.786 da7 Generated table #45@1: 31 keys, 861 bytes
+2020/08/23-18:57:01.786 da7 Compacted 1@1 + 1@2 files => 861 bytes
+2020/08/23-18:57:01.787 da7 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/08/23-18:57:01.788 da7 Delete type=2 #41
+2020/08/23-18:57:01.788 da7 Delete type=2 #44
+2020/08/23-18:57:01.788 da7 Manual compaction at level-1 from '\x00\x01\x01\x1f\x03\x00\xf0\xa8u\xc7AwB\x00\x01\x14\x00F\x00C\x00S\x00B\x00Z\x00D\x001\x006\x00N\x003\x007\x00Y\x003\x004\x000\x005\x00W\x00M\x00N\x00Y' @ 252 : 1 .. (end); will stop at (end)

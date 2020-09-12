@@ -1,0 +1,7 @@
+{
+	"tsserver.npm": "/usr/bin/npm",
+	"javascript.suggestionActions.enabled": false,
+	"python.venvFolders": ["projects/virtualenvs"],
+	"python.venvPath": "~/projects/virtualenvs",
+	"explorer.icon.enableNerdfont": true
+}

@@ -1,0 +1,15 @@
+2020/08/22-13:38:20.312 4aaa Reusing MANIFEST /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.spotify.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/22-13:38:20.312 4aaa Recovering log #15
+2020/08/22-13:38:20.312 4aaa Reusing old log /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.spotify.com_0.indexeddb.leveldb/000015.log 
+2020/08/22-13:38:24.110 cfa Level-0 table #20: started
+2020/08/22-13:38:24.113 cfa Level-0 table #20: 993 bytes OK
+2020/08/22-13:38:24.115 cfa Delete type=0 #15
+2020/08/22-13:38:24.115 cfa Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/08/22-13:38:24.115 cfa Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01*\x00u\x00n\x00A\x00u\x00t\x00h\x00M\x00e\x00s\x00s\x00a\x00g\x00i\x00n\x00g\x00-\x00s\x00t\x00o\x00r\x00a\x00g\x00e\x00_\x00e\x00x\x00p\x00i\x00r\x00a\x00t\x00i\x00o\x00n\x00-\x002\x004\x002\x002\x000\x006\x004' @ 227 : 1
+2020/08/22-13:38:24.115 cfa Compacting 1@1 + 1@2 files
+2020/08/22-13:38:24.117 cfa Generated table #21@1: 21 keys, 734 bytes
+2020/08/22-13:38:24.117 cfa Compacted 1@1 + 1@2 files => 734 bytes
+2020/08/22-13:38:24.118 cfa compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/08/22-13:38:24.118 cfa Delete type=2 #17
+2020/08/22-13:38:24.118 cfa Delete type=2 #20
+2020/08/22-13:38:24.118 cfa Manual compaction at level-1 from '\x00\x01\x01\x02\x01*\x00u\x00n\x00A\x00u\x00t\x00h\x00M\x00e\x00s\x00s\x00a\x00g\x00i\x00n\x00g\x00-\x00s\x00t\x00o\x00r\x00a\x00g\x00e\x00_\x00e\x00x\x00p\x00i\x00r\x00a\x00t\x00i\x00o\x00n\x00-\x002\x004\x002\x002\x000\x006\x004' @ 227 : 1 .. (end); will stop at (end)

@@ -1,0 +1,47 @@
+[General]
+Recent Urls[$e]=file:$HOME/Downloads/Cyberpunk_2077_4K_Wallpaper.mp4,file:$HOME/Downloads/Post-Apocalyptic-Fireplace-Live-Wallpaper.mp4
+TimeFormat=1
+Volume=1
+
+[KFileDialog Settings]
+Recent Files[$e]=Seoul.heic,file:$HOME/Downloads/Seoul.heic
+Recent URLs[$e]=file:$HOME/Downloads/
+detailViewIconSize=0
+
+[MainWindow]
+Height 1080=506
+Height 1440=307
+State=AAAA/wAAAAD9AAAAAAAACgAAAAUiAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=651
+Width 2560=692
+Window-Maximized 1440x2560=true
+
+[file:///home/sepp/Downloads/Cyberpunk_2077_4K_Wallpaper.mp4]
+Brightness=0
+Contrast=0
+Date=2020,4,23
+Hue=0
+IsVideo=false
+Preferred Size=2560,1314
+Saturation=0
+
+[file:///home/sepp/Downloads/Post-Apocalyptic-Fireplace-Live-Wallpaper.mp4]
+Brightness=0
+Contrast=0
+Date=2020,4,23
+Hue=0
+IsVideo=true
+Position=18212
+Preferred Size=2560,1314
+Saturation=0
+Subtitle=0
+
+[file:///home/sepp/Downloads/Seoul.heic]
+Brightness=0
+Contrast=0
+Date=2020,3,15
+Hue=0
+IsVideo=false
+Preferred Size=100,30
+Saturation=0

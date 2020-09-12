@@ -1,0 +1,8 @@
+2020/08/20-20:31:29.264 1511 Reusing MANIFEST /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.tvnow.de_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/20-20:31:29.264 1511 Recovering log #4
+2020/08/20-20:31:29.264 1511 Reusing old log /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.tvnow.de_0.indexeddb.leveldb/000004.log 
+2020/08/20-20:35:18.160 86c Level-0 table #8: started
+2020/08/20-20:35:18.160 86c Level-0 table #8: 0 bytes OK
+2020/08/20-20:35:18.162 86c Delete type=0 #4
+2020/08/20-20:35:18.162 86c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/08/20-20:35:18.162 86c Manual compaction at level-1 from (begin) .. (end); will stop at (end)

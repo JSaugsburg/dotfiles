@@ -1,0 +1,8 @@
+[FileDialogSize]
+Height 1080=780
+Width 1920=1300
+
+[KFileDialog Settings]
+Recent Files[$e]=.face,file:$HOME/projects/wohnungsmarkt/test.geojson,file:$HOME/projects/wohnungsmarkt/geojson/augsburg/augsburg_viertel_all.geojson,file:$HOME/.face
+Recent URLs[$e]=file:$HOME/projects/wohnungsmarkt/
+detailViewIconSize=0

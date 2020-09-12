@@ -1,0 +1,34 @@
+[Game]
+accEnergyNeed=1
+acceleration=0.2
+bulletDamage=20
+bulletLifeTime=500
+bulletReloadTime=10
+gravity=2200
+maxBullets=5
+maxMines=3
+mineActivateTime=15
+mineDamage=30
+mineEnergyNeed=5
+mineFuel=65
+mineReloadTime=10
+powerupEnergyAmount=50
+powerupLifeTime=400
+powerupRefreshTime=800
+powerupShieldAmount=30
+rotationEnergyNeed=0.2
+rotationSpeed=1
+shipDamage=50
+shotEnergyNeed=10
+shotSpeed=3
+startPosX=-130
+startPosY=-100
+startVelX=3
+startVelY=-1.7
+sunEnergy=9000
+
+[MainWindow]
+Height 1440=499
+State=AAAA/wAAAAD9AAAAAAAAAr4AAAGQAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 2560=702

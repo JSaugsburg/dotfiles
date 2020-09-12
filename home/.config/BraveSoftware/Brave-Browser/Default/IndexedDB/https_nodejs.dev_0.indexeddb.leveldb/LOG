@@ -1,0 +1,5 @@
+2020/08/22-20:38:51.997 9dfc Reusing MANIFEST /home/sepp/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_nodejs.dev_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/22-20:39:25.116 cfa Level-0 table #5: started
+2020/08/22-20:39:25.118 cfa Level-0 table #5: 17687 bytes OK
+2020/08/22-20:39:25.120 cfa Delete type=0 #3
+2020/08/22-20:39:25.120 cfa Manual compaction at level-0 from (begin) .. (end); will stop at (end)

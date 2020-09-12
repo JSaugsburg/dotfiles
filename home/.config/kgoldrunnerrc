@@ -1,0 +1,17 @@
+[KDEGame]
+ActualSpeed=10
+ControlMode=2
+GamePrefix=tute
+LastGamePrefix=tute
+LastLevel=6
+Level_tute=6
+SpeedLevel=7
+
+[KgTheme]
+Theme=themes/egypt.desktop
+
+[MainWindow]
+Height 1440=788
+State=AAAA/wAAAAD9AAAAAAAAA8AAAAL2AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAGUAZABpAHQAVABvAG8AbABiAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 2560=960

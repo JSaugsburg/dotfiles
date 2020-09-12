@@ -1,0 +1,14 @@
+[Defaults]
+Profile=Standard
+
+[PROFILE_Default]
+EmailClient=/usr/bin/opera
+
+[PROFILE_Standard]
+EmailAddress=joseph.benedikt.stout@gmail.com
+EmailClient[$e]=opera.desktop
+FullName=Joseph Stout
+Organization=
+ReplyAddr=
+ServerType=
+TerminalClient=false

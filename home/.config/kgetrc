@@ -1,0 +1,11 @@
+[Appearance]
+ShowMain=false
+
+[Internal]
+DropPosition=0,0
+FirstRun=false
+MainPosition=1904,0
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAAAAAoAAAAGYAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAYAGsAZwBlAHQAXwB0AG8AbwBsAGIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled

@@ -1,0 +1,15 @@
+[HTML Settings]
+AutomaticDetectionLanguage=1
+
+[MainWindow]
+Height 1440=656
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABRwAAAJVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 2560=1308
+
+[MainWindowState]
+Splitter=560,744
+
+[Search]
+ScopeSelection=0
