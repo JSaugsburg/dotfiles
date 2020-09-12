@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Get current audio sink
+CURRENTDEV=$(pactl list short sinks | grep RUNNING | awk {'print $1'})
+
+pactl set-sink-mute $CURRENTDEV false ; pactl set-sink-volume $CURRENTDEV +5%

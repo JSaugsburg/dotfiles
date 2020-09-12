@@ -1,0 +1,14 @@
+#!/bin/bash
+
+out=$(pactl list short sinks | grep RUNNING | cut -f 2)
+
+case $out in
+	*pci*)
+		device="🖭 ";;
+	*usb*)
+		device="🎧";;
+	*) device="None";;
+esac
+
+
+echo $device

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+grant_type="grant_type=refresh_token"
+client_id="client_id=3e464a0e0f3d401eb73abf7e2d953144"
+client_secret="client_secret=9af6c04ce48746219a13882324940b0d"
+url="https://accounts.spotify.com/api/token"
+refresh_token="refresh_token=AQDezLjwmX5wTjq1GXvLLuwVc6l48X3HqzO7X-lu7Bgp_fnx5AhCmRGf_bSo5y0dpdMbZLtHPnJZbPqXF-hVF5aMZqIVtMx7DTdUk6tlXgpatNX2iBIZzvAyrmu7YnEoE3Y"
+
+get_token () {
+  token=$(curl -s -d $grant_type -d $client_id -d $client_secret -d $refresh_token $url | jq ."access_token" | sed 's/"//g')
+}
+get_token
+
+journalctl --user -u spotifyd.service -f -n 2 | grep --line-buffered 'URI' |
+while read LINE
+do
+  trackid=$(echo $LINE | rev | cut -d " " -f 1 | rev | sed 's/[<\>]//g' | cut -d ":" -f 3)
+  json=$(curl -s -X "GET" "https://api.spotify.com/v1/tracks/$trackid?market=DE" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer $token")
+  # check if token still valid
+  status=$(echo $json | jq 'keys | contains(["error"])')
+  if [ $status = "true" ]; then
+    get_token
+    json=$(curl -s -X "GET" "https://api.spotify.com/v1/tracks/$trackid?market=DE" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer $token")
+  fi
+  artist=$(echo $json | jq ."artists | .[0] | .name")
+  song=$(echo $json | jq ."name")
+  echo "🎜 $artist "\|\|" $song" | sed 's/\"//g'
+done

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+PAUSED="test"
+export PAUSED

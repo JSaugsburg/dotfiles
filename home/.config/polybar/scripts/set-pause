@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ $PAUSED = true ]; then
+  export PAUSED=false
+else
+  export PAUSED=true
+fi

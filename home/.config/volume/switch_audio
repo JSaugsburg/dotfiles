@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Audio sinks
+HEADSET='alsa_output.usb-Corsair_Corsair_HS70_Wireless_Gaming_Headset-00.iec958-stereo'
+SPEAKERS='alsa_output.pci-0000_1f_00.3.analog-surround-21'
+
+# Get current audio sink
+CURRENTDEV=$(pactl list short sinks | grep RUNNING | awk {'print $2'})
+
+# Determine our next audio sink
+if [[ "$CURRENTDEV" == "$HEADSET" ]]; then
+    NEXTDEV=$SPEAKERS
+else
+    NEXTDEV=$HEADSET
+fi
+
+# Set our default device
+pactl set-default-sink $NEXTDEV
+
+# Move current streams (dont check for null, if null you wont see heads up display of audio change)
+INPUTS=($(pacmd list-sink-inputs | grep index | awk '{print $2}'))
+for i in ${INPUTS[*]}; do pacmd move-sink-input $i $NEXTDEV &> /dev/null; done

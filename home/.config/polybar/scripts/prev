@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+pid=$(wmctrl -l -p | grep -v "grep" | grep spt | cut -d " " -f 4)
+
+window=$(xdotool search --pid $pid)
+xdotool key --window $window p
