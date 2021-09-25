@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+GREEN='\033[0;32m'
+Yellow='\033[0;33m'
+RED='\033[0;31m'
+
+t=$(sensors | grep Tdie | awk '{sub("°", " &"); print $2,$3}' | tr -d '+')
+tint=$(echo $t | grep -o -E '[[:digit:]]{2}')
+
+if [ $tint -le 45 ]; then
+	echo -e "\uf2cb $t"
+elif [ $tint -gt 45 ] && [ $tint -lt 55 ]; then
+	echo -e "\uf2c9 $t"
+elif [ $tint -ge 55 ]; then
+	echo -e "\uf2c7 $t"
+fi

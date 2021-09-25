@@ -1,0 +1,16 @@
+Loading config from "/home/sepp/.config/spotifyd/spotifyd.conf"
+No password specified. Checking password_cmd
+Running "/home/sepp/.local/share/getsptpw" using "/usr/bin/zsh"
+No proxy specified
+Using software volume controller.
+Connecting to AP "gew1-accesspoint-a-56pt.ap.spotify.com:443"
+Authenticated as "emericavega" !
+Country: "DE"
+Loading <Offspring - Original Mix> with Spotify URI <spotify:track:4KGWhcpdmzMUTdRF5F5vnV>
+<Offspring - Original Mix> (431429 ms) loaded
+Loading <Cloudbusting> with Spotify URI <spotify:track:5atQ2haKP5LT65WM0KUts3>
+<Cloudbusting> (310160 ms) loaded
+Loading <Gone Away> with Spotify URI <spotify:track:5BnFZLH99sYav2cxJFGO2n>
+<Gone Away> (268826 ms) loaded
+Loading <Come Out and Play> with Spotify URI <spotify:track:5JJDu0Z5DKe7mR31MGksSg>
+<Come Out and Play> (197800 ms) loaded

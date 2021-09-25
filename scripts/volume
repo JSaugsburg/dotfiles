@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get current audio sink
+CURRENTDEV=$(pactl list short sinks | grep RUNNING | awk {'print $1'})
+
+action=$1
+if [ "${action}" == "volume-up" ]; then
+    pactl set-sink-volume $CURRENTDEV +3%
+elif [ "${action}" == "volume-down" ]; then
+    pactl set-sink-volume $CURRENTDEV -3%
+elif [ "${action}" == "toggle-mute" ]; then
+    pactl set-sink-mute $CURRENTDEV toggle
+fi

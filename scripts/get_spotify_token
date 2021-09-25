@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+client_id=$(sed -n '2p' ~/.config/spotify-tui/client.yml | cut -d " " -f2)
+client_secret=$(sed -n '3p' ~/.config/spotify-tui/client.yml | cut -d " " -f2)
+
+auth_base64=$(echo -n $client_id:$client_secret | base64)
+
+echo $auth_base64
