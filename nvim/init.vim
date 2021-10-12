@@ -27,6 +27,9 @@ set number relativenumber
 " underscore wird als word boundary anerkannt
 set iskeyword-=_
 
+" nur 200ms bei keyinput warten (z.B. bei jk)
+set timeout timeoutlen=200 ttimeoutlen=100
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -83,3 +86,6 @@ let g:airline_powerline_fonts = 1
 
 " dashboard
 let g_dashboard_default_executive='fzf'
+
+" open netrw
+nmap <leader>e :Vexplore<cr>
