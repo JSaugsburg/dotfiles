@@ -5,6 +5,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 "Plug 'glepnir/dashboard-nvim'
 call  plug#end()
 
@@ -28,7 +31,7 @@ set number relativenumber
 set iskeyword-=_
 
 " nur 200ms bei keyinput warten (z.B. bei jk)
-set timeout timeoutlen=200 ttimeoutlen=100
+set timeout timeoutlen=300 ttimeoutlen=100
 
 " Enable filetype plugins
 filetype plugin on
@@ -89,3 +92,9 @@ let g_dashboard_default_executive='fzf'
 
 " open netrw
 nmap <leader>e :Vexplore<cr>
+
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
