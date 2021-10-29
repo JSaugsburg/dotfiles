@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+i=0
+status=$(xrandr | grep "DP-4" | cut -d" " -f2)
+while [ $status = "disconnected" ]
+do
+	if [ $i -gt 5 ]; then
+		break
+	else
+		sleep 1
+		status=$(xrandr | grep "DP-4" | cut -d" " -f2)
+		i=$(( i + 1))
+	fi
+done
+	
+xrandr --output DP-4 --auto --output DP-0 --auto --panning 2560x1440 --left-of DP-4

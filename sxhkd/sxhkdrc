@@ -35,7 +35,7 @@ XF86AudioMute
 
 # fix screens
 super + numbersign
-	xrandr --output DP-4 --auto --output DP-0 --auto --panning 2560x1440 --left-of DP-4
+	fixdualmonitor
 
 # open spt-ui
 super + u

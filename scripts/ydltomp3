@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+# nur mit Playlist Links kompatibel
+
+exit
+echo "hello"
