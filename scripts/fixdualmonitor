@@ -1,15 +1,36 @@
 #!/usr/bin/bash
-i=0
-status=$(xrandr | grep "DP-4" | cut -d" " -f2)
-while [ $status = "disconnected" ]
-do
+
+connect_second_monitor () {
+	i=0
+	status=$(xrandr | grep "DP-4" | cut -d" " -f2)
+	while [ $status = "disconnected" ]
+	do
 	if [ $i -gt 5 ]; then
-		break
+		# konnte nicht connecten
+		exit 1
 	else
 		sleep 1
 		status=$(xrandr | grep "DP-4" | cut -d" " -f2)
 		i=$(( i + 1))
 	fi
-done
-	
-xrandr --output DP-4 --auto --output DP-0 --auto --panning 2560x1440 --left-of DP-4
+	done
+	xrandr --output DP-4 --auto --output DP-0 --auto --panning 2560x1440 --left-of DP-4
+
+	exit 0
+}
+
+# '*' heißt connected, wenn nur 1 * vorhanden, dann versuchen den zweiten Monitor anschließen
+status=$(xrandr | grep "*" | wc -l)
+if [ $status -eq 1 ]; then
+	connect_second_monitor
+
+elif [ $status -eq 2 ]; then
+	status=$(xrandr | grep "panning")
+	# alles in Ordnung
+	if [ -z "$status" ]; then
+		exit 0
+	else
+		connect_second_monitor
+	fi
+fi
+

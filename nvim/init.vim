@@ -4,9 +4,11 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'justinmk/vim-sneak'
 "Plug 'glepnir/dashboard-nvim'
@@ -31,8 +33,8 @@ set number relativenumber
 " underscore wird als word boundary anerkannt
 set iskeyword-=_
 
-" nur 200ms bei keyinput warten (z.B. bei jk)
-set timeout timeoutlen=300 ttimeoutlen=100
+" nur 500ms bei keyinput warten (z.B. bei jk)
+set timeout timeoutlen=500 ttimeoutlen=100
 
 " Enable filetype plugins
 filetype plugin on
@@ -84,6 +86,22 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" coc-snippets
+imap <C-t> <Plug>(coc-snippets-expand)
+
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -92,7 +110,10 @@ let g:airline_powerline_fonts = 1
 let g_dashboard_default_executive='fzf'
 
 " open netrw
-nmap <leader>e :Vexplore<cr>
+" with vertical split
+nmap <leader>E :Vexplore<cr>
+" with new tab
+nmap <leader>e :Texplore<cr>
 
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

@@ -2,9 +2,18 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-#bspc monitor -d I II III IV V VI VII VIII IX X
-bspc monitor DP-0 -d I II III IV
-bspc monitor DP-4 -d V VI VII VIII
+# check ob ein oder beide Monitore angeschlossen sind
+monitors=$(bspc query -M --names | wc -l)
+if [ $monitors -eq 2 ]; then
+	bspc monitor $(bspc query -M --names | sed -n "1p") -d I II III IV
+	bspc monitor $(bspc query -M --names | sed -n "2p") -d V VI VII VIII
+# nur 1 Monitor connected
+elif [ $monitors -eq 1 ]; then
+	bspc monitor $(bspc query -M --names) -d I II III IV V VI VII VIII
+# Fallback
+else
+	bspc monitor -d I II III IV V VI VII VIII IX X
+fi
 
 bspc config border_width          2
 bspc config window_gap            12
@@ -46,7 +55,7 @@ spotifyd --no-daemon &
 # autostart kitty
 pgrep -x alacritty > /dev/null
 if [ $? -eq 1 ];
-	then alacritty &
+	then alacritty -e tmux &
 fi
 
 # autostart firefox
