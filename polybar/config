@@ -42,7 +42,7 @@ font-4 = Weather Icons:size=12;1
 
 modules-left = player playerctl
 modules-center = bspwm
-modules-right = weather updates-pacman-aurhelper temperature filesystem cpu memory check-sink pulseaudio date powermenu
+modules-right = weather updates-pacman-aurhelper temperature filesystem cpu memory check-sink pulseaudio calendar date powermenu
 
 tray-position = right
 tray-padding = 1
@@ -141,12 +141,18 @@ date = %a %d %b
 time = %H:%M
 time-alt = %a %d %b %H:%M:%S
 label = %time%
-format = <label>
+format = <label>
 format-prefix =
 format-foreground = ${colors.blue}
 format-prefix-padding = 1
 format-prefix-foreground = #acd7ff
-label-padding = 1
+;label-padding = 1
+
+[module/calendar]
+type = custom/text
+content = 
+content-foreground = ${colors.blue}
+click-left = spawn_calcurse
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -176,7 +182,6 @@ bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground}
 
 [module/powermenu]
-
 type = custom/text
 content = " "
 content-foreground = ${colors.red}

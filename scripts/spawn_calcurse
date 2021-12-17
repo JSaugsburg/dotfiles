@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+bspc rule -a Alacritty -o state=floating rectangle=940x640+1615+36
+alacritty -e "calcurse"

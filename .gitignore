@@ -1,5 +1,6 @@
 coc/
 htop/
+*.png
 .mono/
 caddy/
 tint2/
@@ -12,13 +13,15 @@ kitty/
 discord/
 unity3d/
 KeePass/
+spotify/
+calcurse/
 neofetch/
 inkscape/
 pipewire/
-spotify/
-tmux/plugins
+flameshot/
 keepassxc/
 Skycoder42/
+tmux/plugins
 mimeapps.list
 herbstluftwm/
 cef_user_data/

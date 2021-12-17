@@ -17,6 +17,10 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# open steam
+super + udiaeresis
+	steam
+
 # open Emacs
 super + e
 	emacs
@@ -60,6 +64,10 @@ shift + XF86AudioPrev
 # Pause/Play
 XF86AudioPlay
 	spt pb -t
+
+# make a screenshot
+Print
+	flameshot gui
 
 #
 # bspwm hotkeys

@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-lua/plenary.nvim'
@@ -120,3 +120,11 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" lsptests
+lua << EOF
+require'lspconfig'.rust_analyzer.setup{}
+EOF
+lua << EOF
+require'lspconfig'.pyright.setup{}
+EOF
