@@ -69,6 +69,9 @@ XF86AudioPlay
 Print
 	flameshot gui
 
+# shutdown
+ctrl + alt + Delete 
+	rofi -show power-menu -modi power-menu:rofi-power-menu -theme Arc-Dark
 #
 # bspwm hotkeys
 #

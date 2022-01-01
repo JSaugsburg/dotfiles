@@ -18,12 +18,15 @@ calcurse/
 neofetch/
 inkscape/
 pipewire/
+bitburner/
 flameshot/
 keepassxc/
 Skycoder42/
 tmux/plugins
+nvim/plugged
 mimeapps.list
 herbstluftwm/
+Raspberry Pi/
 cef_user_data/
 QtProject.conf
 BraveSoftware/
