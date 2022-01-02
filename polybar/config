@@ -222,6 +222,7 @@ type = custom/ipc
 hook-0 = whoami
 hook-1 = ~/.config/polybar/scripts/get_current_sink
 initial = 2
+click-left = switch_audio
 
 [module/weather]
 type = custom/script

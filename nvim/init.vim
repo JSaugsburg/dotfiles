@@ -32,6 +32,8 @@ colorscheme gruvbox-material
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" keine swap files
+set noswapfile
 " Sets how many lines of history VIM has to remember
 set history=500
 
