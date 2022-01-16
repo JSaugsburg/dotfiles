@@ -109,5 +109,5 @@ if [ -n "$current" ] && [ -n "$forecast" ]; then
         daytime="  $(get_duration "$((sun_rise-now))")"
     fi
 
-    echo "%{T5}$(get_icon "$current_icon")%{T1}$current_temp$SYMBOL%{T1} $trend %{T5} $(get_icon "$forecast_icon") %{T1}$forecast_temp$SYMBOL $daytime"
+    echo "%{T5}$(get_icon "$current_icon") %{T1}$current_temp$SYMBOL%{T1} $trend %{T5} $(get_icon "$forecast_icon") %{T1}$forecast_temp$SYMBOL $daytime"
 fi

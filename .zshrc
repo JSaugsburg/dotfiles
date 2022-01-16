@@ -47,7 +47,7 @@ compinit
 #bindkey -M vicmd '^V' edit-command-line
 
 # colorscheme mit pywal
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 
 # add doom to path
 PATH="/home/sepp/.emacs.d/bin${PATH:+:${PATH}}"; export PATH;

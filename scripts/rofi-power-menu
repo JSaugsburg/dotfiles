@@ -13,7 +13,7 @@ set -e
 set -u
 
 # All supported choices
-all=(shutdown reboot suspend hibernate logout lockscreen)
+all=(shutdown reboot suspend hibernate logout)
 
 # By default, show all (i.e., just copy the array)
 show=("${all[@]}")
@@ -41,10 +41,10 @@ declare -A actions
 actions[lockscreen]="loginctl lock-session ${XDG_SESSION_ID-}"
 #actions[switchuser]="???"
 actions[logout]="loginctl terminate-session ${XDG_SESSION_ID-}"
-actions[suspend]="loginctl suspend"
-actions[hibernate]="loginctl hibernate"
-actions[reboot]="sudo openrc-shutdown -r now"
-actions[shutdown]="sudo openrc-shutdown -p now"
+actions[suspend]="systemctl suspend"
+actions[hibernate]="systemctl hibernate"
+actions[reboot]="systemctl reboot"
+actions[shutdown]="sudo shutdown -h now"
 
 # By default, ask for confirmation for actions that are irreversible
 confirmations=(reboot shutdown logout)

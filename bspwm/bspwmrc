@@ -1,6 +1,6 @@
 #! /bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd > sxtest 2>&1 &
 
 # check ob ein oder beide Monitore angeschlossen sind
 monitors=$(bspc query -M --names | wc -l)
@@ -26,18 +26,19 @@ bspc config presel_feedback_color "#c678dd"
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
-bspc rule -a KeePass2 state=floating
+bspc rule -a KeePassXC state=floating center=on
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a firefox desktop='^5' follow=on
-bspc rule -a Steam desktop='^3' state=floating follow=on
+bspc rule -a firefoxesr desktop='^5' follow=on
+bspc rule -a Steam desktop='^3' state=floating
+bspc rule -a discord desktop='^4' state=floating follow=on
 bspc rule -a Emacs desktop='^2' state=fullscreen follow=on
-bspc rule -a firefox:Toolkit sticky=on state=floating rectangle=800x600+4300+820
+bspc rule -a firefoxesr:Toolkit sticky=on state=floating rectangle=800x600+4300+820
 
 
 # Hintergrundbild setzen
 #feh --bg-scale --no-xinerama ~/Bilder/Wallpaper/nightcity2dual.jpg
-feh --bg-center ~/Bilder/Wallpaper/wallpaper_mikael_gustafsson.png
+feh --bg-center ~/Bilder/Wallpaper/portal_to_another_world.png
 
 # Compositor
 picom -b --config ~/.config/picom/picom.conf
@@ -74,4 +75,4 @@ killall polybar
 polybar bar &
 
 # mount hetzner fs
-sshfs -o allow_other sepp@server.jstout.de:/home/sepp /mnt/server
+sshfs -o allow_other sepp@server.jstout.de:/var/sftp /home/sepp/server -o follow_symlinks

@@ -6,9 +6,6 @@
 super + Return
 	alacritty
 
-# Browser
-super + b
-	firefox
 # program launcher
 super + @space
 	dmenu_run
@@ -17,9 +14,9 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# open steam
-super + udiaeresis
-	steam
+# open Programs
+super + o ; {s,k,d,m,b}
+	{steam,keepassxc,discord,spotify,firefox}
 
 # open Emacs
 super + e
@@ -45,10 +42,6 @@ XF86AudioMute
 super + numbersign
 	fixdualmonitor
 
-# open spt-ui
-super + u
-	spot
-
 # next Song
 XF86AudioNext
 	spt pb -n
@@ -70,7 +63,7 @@ Print
 	flameshot gui
 
 # shutdown
-ctrl + alt + Delete 
+ctrl + alt + Delete
 	rofi -show power-menu -modi power-menu:rofi-power-menu -theme Arc-Dark
 #
 # bspwm hotkeys
@@ -125,7 +118,7 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+super + {d,u}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
@@ -136,10 +129,10 @@ super + {grave,Tab}
 	rofi -show window
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+#super + {o,i}
+#	bspc wm -h off; \
+#	bspc node {older,newer} -f; \
+#	bspc wm -h on
 
 # send to the given desktop and follow
 super + shift + {1-9,0}
@@ -176,6 +169,16 @@ super + ctrl + shift + space
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
+# resize windows
+super + alt + {h,j,k,l}
+	{bspc node -z right -20 0; \
+	bspc node -z left +20 0, \
+	bspc node -z top 0 -20; \
+	bspc node -z bottom 0 +20, \
+	bspc node -z top 0 +20; \
+	bspc node -z bottom 0 -20, \
+	bspc node -z right +20 0; \
+	bspc node -z left -20 0}
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
@@ -183,3 +186,7 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Rotate tree
+super + shift + {d,a}
+    bspc node @/ -C {forward,backward}

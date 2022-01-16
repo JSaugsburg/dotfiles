@@ -20,6 +20,7 @@ bright_white = #ffffff
 foreground = #ebdbb2
 
 [bar/bar]
+monitor = DP-0
 width = 100%
 height = 25
 fixed-center = true
@@ -42,7 +43,7 @@ font-4 = Weather Icons:size=12;1
 
 modules-left = player playerctl
 modules-center = bspwm
-modules-right = weather updates-pacman-aurhelper temperature filesystem cpu memory check-sink pulseaudio calendar date powermenu
+modules-right = gmail weather updates-pacman-aurhelper temperature filesystem cpu memory check-sink pulseaudio timer calendar date powermenu
 
 tray-position = right
 tray-padding = 1
@@ -53,6 +54,25 @@ cursor-scroll = ns-resize
 wm-restack = bspwm
 
 locale = de_DE.UTF-8
+
+[module/timer]
+
+type = custom/script
+format-foreground = ${colors.bright_yellow}
+exec = ~/.config/polybar/scripts/polybar-timer.sh tail '' 5
+tail = true
+
+click-left = ~/.config/polybar/scripts/polybar-timer.sh new 10 'TMR' 'Paused' 'notify-send "Session finished"' ; ~/.config/polybar/scripts/polybar-timer.sh update %pid%
+click-middle = ~/.config/polybar/scripts/polybar-timer.sh cancel ; ~/.config/polybar/scripts/polybar-timer.sh update %pid%
+click-right = ~/.config/polybar/scripts/polybar-timer.sh togglepause ; ~/.config/polybar/scripts/polybar-timer.sh update %pid%
+scroll-up = ~/.config/polybar/scripts/polybar-timer.sh increase 60 || ~/.config/polybar/scripts/polybar-timer.sh new 1 '' 'PAUSED' 'notify-send -u critical "Timer expired."' ; ~/.config/polybar/scripts/polybar-timer.sh update %pid%
+scroll-down = ~/.config/polybar/scripts/polybar-timer.sh increase -60 ; ~/.config/polybar/scripts/polybar-timer.sh update %pid%
+
+[module/gmail]
+type = custom/script
+exec = ~/.config/polybar/scripts/gmail/launch.py
+tail = true
+click-left = xdg-open https://mail.google.com
 
 [module/filesystem]
 type = custom/script

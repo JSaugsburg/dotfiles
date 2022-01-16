@@ -16,6 +16,3 @@ done
 
 # switch device
 pactl set-default-sink $next_device
-
-sleep 1
-echo hook:module/check-sink2 >> /tmp/polybar_mqueue.*
