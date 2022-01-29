@@ -1,5 +1,6 @@
 return require("packer").startup(function()
 	use "lewis6991/impatient.nvim"
+	use "neovim/nvim-lspconfig"
 	use "wbthomason/packer.nvim"
 	use "sainnhe/gruvbox-material"
 	use "arcticicestudio/nord-vim"

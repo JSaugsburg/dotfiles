@@ -52,6 +52,9 @@ compinit
 # add doom to path
 PATH="/home/sepp/.emacs.d/bin${PATH:+:${PATH}}"; export PATH;
 
+# add .local/bin to path
+PATH="/home/sepp/.local/bin${PATH:+:${PATH}}"; export PATH;
+
 # wrap hub with git
 eval "$(hub alias -s)"
 
@@ -95,3 +98,7 @@ SPACESHIP_VI_MODE_SHOW=false
 
 autoload -U promptinit; promptinit
 prompt spaceship
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
