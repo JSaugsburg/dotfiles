@@ -2,7 +2,7 @@
 export EDITOR='nvim'
 
 # Bei Ranger nur custom conf laden
-RANGER_LOAD_DEFAULT_RC=FALSE
+#RANGER_LOAD_DEFAULT_RC=FALSE
 
 # aliases
 alias ls="ls --color=auto"
@@ -49,17 +49,10 @@ compinit
 # colorscheme mit pywal
 #(cat ~/.cache/wal/sequences &)
 
-# add doom to path
-PATH="/home/sepp/.emacs.d/bin${PATH:+:${PATH}}"; export PATH;
-
-# add .local/bin to path
-PATH="/home/sepp/.local/bin${PATH:+:${PATH}}"; export PATH;
-
 # wrap hub with git
 eval "$(hub alias -s)"
 
 # PLUGINS
-
 # syntax-highlighting
 source "$HOME/Software/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # vim mode

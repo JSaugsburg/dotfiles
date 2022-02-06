@@ -1,18 +1,9 @@
 #!/usr/bin/bash
 
-# Run `pw-play --list-targets` for a list of sink names.
-# filter out unused sink GP104
-sink_ids=$(pw-play --list-targets | sed '1d' | grep -v "GP104\|ALC892" | tr "*" " " | sed -r 's/\s+//g' | cut -d ":" -f1)
-# get current state
-for id in $sink_ids; do
-	state=$(pw-dump | jq --argjson id $id '.[] | select(.id == $id) | .info.state')
-	if [[ $state == \"running\" ]];
-       		then current_device=$id;
-	fi
-	if [[ $state != \"running\" ]];
-       		then next_device=$id;
-	fi
-done
-
+# Run `pactl list short sinks` for a list of sink names.
+# filter out unused sink hdmi -> Lautsprecherboxen; am Schluss noch Whitespace durch * erstezen
+# macht den cut Befehl später leichter
+sink_ids=$(pactl list short sinks | grep -v "hdmi" | sed -r 's/\s+/*/g')
+next_device=$(echo "$sink_ids" | grep -v "RUNNING" | cut -d "*" -f1)
 # switch device
 pactl set-default-sink $next_device
