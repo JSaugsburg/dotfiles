@@ -27,9 +27,9 @@ bspc config presel_feedback_color "#c678dd"
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a KeePassXC state=floating center=on
-bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a firefoxesr desktop='^5' follow=on
+#bspc rule -a firefoxesr desktop='^5' follow=on
+bspc rule -a firefoxesr state=floating
 bspc rule -a Steam desktop='^3' state=floating
 bspc rule -a discord desktop='^4' state=floating follow=on
 bspc rule -a Emacs desktop='^2' state=fullscreen follow=on
@@ -48,31 +48,25 @@ picom -b --config ~/.config/picom/picom.conf
 
 # zscroll
 killall zscroll
+killall polybar
+polybar bar &
 
 # Spotifyd
 killall spotifyd
 spotifyd --no-daemon &
 
-# autostart kitty
+# autostart alacritty
 pgrep -x alacritty > /dev/null
 if [ $? -eq 1 ];
 	then alacritty -e tmux &
 fi
 
 # autostart firefox
+bspc rule -a firefoxesr --one-shot desktop='^5'
 pgrep -x firefox > /dev/null
 if [ $? -eq 1 ];
 	then firefox &
 fi
 
-# Statusbar
-killall polybar
-# auf Pipewire warten
-#pgrep -x pipewire > /dev/null
-#if [ $? -eq 0 ];
-#	then polybar bar &
-#fi
-polybar bar &
-
-# mount hetzner fs
-sshfs -o allow_other sepp@server.jstout.de:/var/sftp /home/sepp/server -o follow_symlinks
+# welches audio_sink ist in Verwendung?
+polybar-msg hook check-sink 2
