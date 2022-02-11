@@ -16,7 +16,7 @@ super + Escape
 
 # open Programs
 super + o ; {s,k,d,m,b,e}
-	{steam,keepassxc,discord,spotify,firefox,emacs}
+	{steam,openkpcx,discord,spotify,firefox,emacs}
 
 # switch audio device
 super + a

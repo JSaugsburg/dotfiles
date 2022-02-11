@@ -1,4 +1,5 @@
 coc/
+cdm/
 htop/
 *.png
 .mono/
@@ -36,5 +37,6 @@ Raspberry Pi/
 cef_user_data/
 QtProject.conf
 BraveSoftware/
+scripts/openkpcx
 spotify-tui/client.yml
 **/.spotify_token_cache.json
