@@ -45,7 +45,9 @@ colorscheme gruvbox-material
 " damit auch vim panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
 " https://dev.to/serhatteker/tmux-vim-active-pane-focus-5378
 " highlight Normal guifg=#D8DEE9 guibg=none
-highlight Normal ctermfg=223 ctermbg=none guifg=#D4BE98 guibg=none
+highlight Normal guibg=none ctermbg=none
+highlight EndOfBuffer guibg=none ctermbg=none
+"highlight Normal ctermfg=223 ctermbg=none guifg=#D4BE98 guibg=none
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General

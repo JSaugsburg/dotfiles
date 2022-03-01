@@ -24,6 +24,8 @@ bspc config gapless_monocle       true
 bspc config focused_border_color  "#2bcec2"
 bspc config presel_feedback_color "#c678dd"
 
+bspc config -d V window_gap 0
+
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a KeePassXC state=floating center=on
 bspc rule -a KeePass2 state=floating center=on
@@ -38,7 +40,8 @@ bspc rule -a firefoxesr:Toolkit sticky=on state=floating rectangle=800x600+4300+
 
 # Hintergrundbild setzen
 #feh --bg-scale --no-xinerama ~/Bilder/Wallpaper/nightcity2dual.jpg
-feh --bg-center ~/Bilder/Wallpaper/portal_to_another_world.png
+#feh --bg-center ~/Bilder/Wallpaper/portal_to_another_world.png
+feh --bg-center ~/Bilder/Wallpaper/sun-line-2560×1440.jpg
 
 # Compositor
 picom -b --config ~/.config/picom/picom.conf
@@ -55,14 +58,15 @@ polybar bar &
 killall spotifyd
 spotifyd --no-daemon &
 
-# autostart alacritty
-pgrep -x alacritty > /dev/null
+# autostart st
+bspc rule -a st --one-shot desktop='^1' 
+pgrep -x st > /dev/null
 if [ $? -eq 1 ];
-	then alacritty -e tmux &
+	then st -e tmux &
 fi
 
 # autostart firefox
-bspc rule -a firefoxesr --one-shot desktop='^5'
+bspc rule -a firefoxesr --one-shot desktop='^5' 
 pgrep -x firefox > /dev/null
 if [ $? -eq 1 ];
 	then firefox &

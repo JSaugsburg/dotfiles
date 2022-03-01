@@ -9,6 +9,7 @@ alias ls="ls --color=auto"
 alias ll="ls -la"
 alias l.="ls -d .* --color=auto"
 alias zshrc="vim ~/.zshrc"
+alias grep="grep --color=auto"
 alias conf="cd ~/.config"
 alias bspwmrc="vim ~/.config/bspwm/bspwmrc"
 alias sxhkdrc="vim ~/.config/sxhkd/sxhkdrc"
@@ -50,7 +51,7 @@ compinit
 #(cat ~/.cache/wal/sequences &)
 
 # wrap hub with git
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"
 
 # PLUGINS
 # syntax-highlighting
@@ -59,7 +60,7 @@ source "$HOME/Software/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 VIM_MODE_VICMD_KEY="jk"
 MODE_CURSOR_VIINS="#ebdbb2 blinking bar"
 MODE_CURSOR_REPLACE="$MODE_CURSOR_VIINS #ff0000"
-MODE_CURSOR_VICMD="green block"
+MODE_CURSOR_VICMD="#a9b665 block"
 MODE_CURSOR_SEARCH="#ff00ff steady underline"
 MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
 MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
@@ -85,6 +86,12 @@ if [[ -n "$TMUX" ]]; then
 	bindkey "\e[1~"  beginning-of-line
 	bindkey "\e[4~"  end-of-line
 fi
+
+# del key in st
+function zle-line-init () { echoti smkx }
+function zle-line-finish () { echoti rmkx }
+zle -N zle-line-init
+zle -N zle-line-finish
 
 # theme setzen
 SPACESHIP_VI_MODE_SHOW=false

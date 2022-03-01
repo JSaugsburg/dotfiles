@@ -1,6 +1,7 @@
 coc/
 cdm/
 htop/
+GIMP/
 *.png
 .mono/
 caddy/
@@ -14,6 +15,7 @@ pulse/
 kitty/
 *BACKUP*
 discord/
+gtk-2.0/
 unity3d/
 KeePass/
 spotify/
