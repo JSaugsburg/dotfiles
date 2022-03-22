@@ -59,18 +59,23 @@ killall spotifyd
 spotifyd --no-daemon &
 
 # autostart st
-bspc rule -a st --one-shot desktop='^1' 
+bspc rule -a st --one-shot desktop='^1'
 pgrep -x st > /dev/null
 if [ $? -eq 1 ];
 	then st -e tmux &
 fi
 
 # autostart firefox
-bspc rule -a firefoxesr --one-shot desktop='^5' 
+bspc rule -a firefoxesr --one-shot desktop='^5'
 pgrep -x firefox > /dev/null
 if [ $? -eq 1 ];
 	then firefox &
 fi
 
+# start greenclip
+pgrep -x greenclip > /dev/null
+if [ $? -eq 1 ];
+	then greenclip daemon &
+fi
 # welches audio_sink ist in Verwendung?
 polybar-msg hook check-sink 2

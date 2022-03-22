@@ -21,6 +21,11 @@ KeePass/
 spotify/
 calcurse/
 neofetch/
+cmus/cache
+cmus/lib.pl
+cmus/command-history
+cmus/search-history
+Clementine/
 inkscape/
 pipewire/
 TabNine/

@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	st
 
 # program launcher
 super + @space
@@ -57,6 +57,10 @@ XF86AudioPlay
 # make a screenshot
 Print
 	flameshot gui
+
+# open Greenclip
+super + plus
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # shutdown
 ctrl + alt + Delete

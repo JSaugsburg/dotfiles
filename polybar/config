@@ -184,7 +184,7 @@ label-volume-foreground = #ffdaaa
 
 label-muted =   muted
 label-muted-foreground = #666
-bar-volume-width = 10
+bar-volume-width = 6
 bar-volume-foreground-0 = #98c379
 bar-volume-foreground-1 = #98c379
 bar-volume-foreground-2 = #98c379
