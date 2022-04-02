@@ -1,12 +1,6 @@
 #!/usr/bin/bash
 
-running_sink=$(pactl list short | grep RUNNING)
-i=0
-while [[ -z $running_sink && $i -lt 10 ]]; do
-	sleep 1
-        running_sink=$(pactl list short | grep RUNNING)
-	let i++
-done
+running_sink=$(awk '/default-nodes/{getline;print}' ~/.local/state/wireplumber/default-nodes)
 if [[ $running_sink == *"Headset"* ]]; then
 	echo ""
 

@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+inotifywait -q -m -e moved_to --format %e ~/.local/state/wireplumber |
+while read events; do
+	#echo $events
+	polybar-msg action "#check-sink.hook.1" > /dev/null
+done
+

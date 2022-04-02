@@ -78,4 +78,7 @@ if [ $? -eq 1 ];
 	then greenclip daemon &
 fi
 # welches audio_sink ist in Verwendung?
-polybar-msg hook check-sink 2
+pgrep -x check_current_sink > /dev/null
+if [ $? -eq 1 ];
+	then check_current_sink &
+fi
