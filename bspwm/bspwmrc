@@ -31,11 +31,11 @@ bspc rule -a KeePassXC state=floating center=on
 bspc rule -a KeePass2 state=floating center=on
 bspc rule -a Screenkey manage=off
 #bspc rule -a firefoxesr desktop='^5' follow=on
-bspc rule -a firefoxesr state=floating
+bspc rule -a firefox-esr state=floating
 bspc rule -a Steam desktop='^3' state=floating follow=off
 bspc rule -a discord desktop='^4' state=floating follow=on
 bspc rule -a Emacs desktop='^2' state=fullscreen follow=on
-bspc rule -a firefoxesr:Toolkit sticky=on state=floating rectangle=800x600+4300+820
+bspc rule -a firefox-esr:Toolkit sticky=on state=floating rectangle=800x600+4300+820
 
 
 # Hintergrundbild setzen
@@ -66,10 +66,10 @@ if [ $? -eq 1 ];
 fi
 
 # autostart firefox
-bspc rule -a firefoxesr --one-shot desktop='^5'
-pgrep -x firefox > /dev/null
+bspc rule -a firefox-esr --one-shot desktop='^5'
+pgrep -x firefox-esr > /dev/null
 if [ $? -eq 1 ];
-	then firefox &
+	then firefox-esr &
 fi
 
 # start greenclip

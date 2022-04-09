@@ -219,6 +219,7 @@ label-foreground = ${colors.teal}
 type = custom/script
 exec = ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
 tail = true
+click-left = pacman_update
 format-foreground = ${colors.bright_red}
 
 [module/player]
