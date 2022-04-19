@@ -45,5 +45,6 @@ cef_user_data/
 QtProject.conf
 BraveSoftware/
 scripts/openkpcx
+**/supervise/status
 spotify-tui/client.yml
 **/.spotify_token_cache.json
