@@ -72,6 +72,13 @@ if [ $? -eq 1 ];
 	then firefox-esr &
 fi
 
+# start spotifyd
+pgrep -x spotifyd > /dev/null
+if [ $? -eq 1 ];
+	then spotifyd --no-daemon &
+fi
+
+
 # start greenclip
 pgrep -x greenclip > /dev/null
 if [ $? -eq 1 ];
