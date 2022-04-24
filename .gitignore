@@ -23,8 +23,11 @@ calcurse/
 neofetch/
 cmus/cache
 cmus/lib.pl
+cmus/autosave
 cmus/command-history
 cmus/search-history
+sv/spotifyd/log/supervise/pid
+sv/spotifyd/log/supervise/status
 Clementine/
 inkscape/
 pipewire/
