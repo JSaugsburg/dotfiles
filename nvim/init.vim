@@ -3,16 +3,18 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'sainnhe/gruvbox-material'
 "Plug 'arcticicestudio/nord-vim'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'nvim-lualine/lualine.nvim'
+Plug 'feline-nvim/feline.nvim'
+""Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'justinmk/vim-sneak'
-
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
@@ -33,8 +35,10 @@ call  plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set termguicolors
 set background=dark
 colorscheme gruvbox-material
+let g:gruvbox_material_background = 'hard'
 "colorscheme deus
 " damit auch vim panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
 " https://dev.to/serhatteker/tmux-vim-active-pane-focus-5378

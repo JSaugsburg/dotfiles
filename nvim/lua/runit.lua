@@ -7,4 +7,7 @@
 --require("gitsigns").setup()
 --require'lspconfig'.pyright.setup{}
 require("js.lspconfig")
+require("js.feline")
+require("js.telescope")
+--require("feline").setup()
 --require("js.cmp")
