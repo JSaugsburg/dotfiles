@@ -4,7 +4,7 @@
 --require("js.mappings")
 --require("js.settings")
 --require("lualine").setup()
---require("gitsigns").setup()
+require("gitsigns").setup()
 --require'lspconfig'.pyright.setup{}
 require("js.lspconfig")
 require("js.feline")
