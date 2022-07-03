@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'sainnhe/gruvbox-material'
 "Plug 'arcticicestudio/nord-vim'
 
+Plug 'christoomey/vim-tmux-navigator'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 "Plug 'nvim-lualine/lualine.nvim'
