@@ -58,7 +58,8 @@ table.insert(components.active[1], {
       str = '  ',
       hl = function()
         return {
-          fg = vi_utils.get_mode_color()
+          fg = vi_utils.get_mode_color(),
+          bg = 'black'
         }
       end
       },
@@ -76,60 +77,44 @@ table.insert(components.active[1], {
     }
   },
   hl = {
-    fg = 'cyan'
-  },
-})
--- GIT
-table.insert(components.active[1], {
-  provider = 'git_branch',
-  hl = {
-        bg = 'black',
-        fg = 'violet'
-  },
-  left_sep = {
-    str = '  ',
-    hl = {
-      fg = 'black'
-    }
-  }
-})
-
-table.insert(components.active[1], {
-  provider = 'git_diff_added',
-  hl = function()
-    if git_utils.git_info_exists() then
-      return {
-        bg = 'black',
-        fg = 'green'
-      } else return {
-        bg = bg
-      }
-    end
-  end
-})
-
-table.insert(components.active[1], {
-  provider = 'git_diff_removed',
-  hl = {
-    bg = 'black',
-    fg = 'red'
-  },
-  enabled = git_exists
-})
-
-table.insert(components.active[1], {
-  provider = 'git_diff_changed',
-  hl = {
-    bg = 'black',
-    fg = 'yellow'
+    fg = 'cyan',
+    bg = 'black'
   },
   right_sep = {
     str = '  ',
     hl = {
       fg = 'black'
     }
+  }
+})
+-- GIT
+table.insert(components.active[1], {
+  provider = 'git_branch',
+  hl = {
+    fg = 'violet'
   },
-  enabled = git_exists
+  icon = ' '
+})
+
+table.insert(components.active[1], {
+  provider = 'git_diff_added',
+  hl = {
+    fg = 'green'
+  }
+})
+
+table.insert(components.active[1], {
+  provider = 'git_diff_removed',
+  hl = {
+    fg = 'red'
+  }
+})
+
+table.insert(components.active[1], {
+  provider = 'git_diff_changed',
+  hl = {
+    fg = 'yellow'
+  },
 })
 
 table.insert(components.active[2], {
