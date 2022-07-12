@@ -1,18 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-"Plug 'ajmwagar/vim-deus'
-Plug 'sainnhe/gruvbox-material'
-"Plug 'arcticicestudio/nord-vim'
-
-Plug 'christoomey/vim-tmux-navigator'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-"Plug 'nvim-lualine/lualine.nvim'
-Plug 'feline-nvim/feline.nvim'
-""Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'justinmk/vim-sneak'
 Plug 'lewis6991/gitsigns.nvim'
@@ -36,10 +22,10 @@ call  plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set termguicolors
-set background=dark
-colorscheme gruvbox-material
-let g:gruvbox_material_background = 'hard'
+"set termguicolors
+"set background=dark
+" colorscheme gruvbox-material
+" let g:gruvbox_material_background = 'hard'
 "colorscheme deus
 " damit auch vim panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
 " https://dev.to/serhatteker/tmux-vim-active-pane-focus-5378
@@ -132,4 +118,5 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+lua require("plugins")
 lua require("runit")
