@@ -5,6 +5,7 @@
 --require("js.settings")
 --require("lualine").setup()
 require("gitsigns").setup()
+require("nvim-autopairs").setup {}
 --require'lspconfig'.pyright.setup{}
 require("js.lspconfig")
 require("js.feline")
