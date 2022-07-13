@@ -1,8 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'justinmk/vim-sneak'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'tpope/vim-fugitive'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
@@ -18,21 +14,6 @@ Plug 'windwp/nvim-autopairs'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 call  plug#end()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set termguicolors
-"set background=dark
-" colorscheme gruvbox-material
-" let g:gruvbox_material_background = 'hard'
-"colorscheme deus
-" damit auch vim panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
-" https://dev.to/serhatteker/tmux-vim-active-pane-focus-5378
-" highlight Normal guifg=#D8DEE9 guibg=none
-highlight Normal guibg=none ctermbg=none
-highlight EndOfBuffer guibg=none ctermbg=none
-"highlight Normal ctermfg=223 ctermbg=none guifg=#D4BE98 guibg=none
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
