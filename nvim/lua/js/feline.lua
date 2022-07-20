@@ -18,6 +18,8 @@ local colors = {
   --bg = '#282828',
   bg = '#3c3836',
   black = '#1d2021',
+  grey = '#7c6f64',
+  grey2 = '#665c54',
   yellow = '#d8a657',
   cyan = '#89b482',
   oceanblue = '#45707a',
@@ -73,7 +75,8 @@ table.insert(components.active[1], {
     name = 'file_info',
     opts = {
       file_modified_icon = '',
-      type = 'unique-short'
+      --type = 'unique-short'
+      type = 'short-path'
     }
   },
   hl = {
@@ -134,6 +137,13 @@ table.insert(components.active[3], {
     hl = {
       fg = 'red'
     }
+  },
+  right_sep = {
+    str = 'left_filled',
+    hl = {
+      fg = 'bg',
+      bg = 'red'
+    }
   }
 })
 
@@ -142,39 +152,110 @@ table.insert(components.active[3], {
   icon = '',
   hl = {
     fg = 'black',
-    bg = 'red'
+    bg = 'yellow'
   },
   left_sep = {
     str = 'left_filled',
     hl = {
-      fg = 'red'
+      fg = 'yellow'
+    }
+  },
+  right_sep = {
+    str = 'left_filled',
+    hl = {
+      fg = 'bg',
+      bg = 'yellow'
     }
   }
+})
+
+table.insert(components.active[3], {
+  provider = 'diagnostic_hints',
+  icon = '',
+  hl = {
+    fg = 'black',
+    bg = 'skyblue'
+  },
+  left_sep = {
+    str = 'left_filled',
+    hl = {
+      fg = 'skyblue'
+    }
+  },
+  right_sep = {
+    str = 'left_filled',
+    hl = {
+      fg = 'bg',
+      bg = 'skyblue'
+    }
+  },
 })
 
 -- Encoding
 table.insert(components.active[3], {
   provider = 'file_encoding',
+  left_sep = {
+    str = 'left_filled',
+    hl = {
+      fg = 'grey2'
+    }
+  },
   hl = {
+    bg = 'grey2',
     fg = 'white'
+  }
+})
+
+-- File Type
+table.insert(components.active[3], {
+  provider = 'file_type',
+  left_sep = {
+    str = ' ',
+    hl = {
+      bg = 'grey2'
+    }
+  },
+  right_sep = {
+    str = ' ',
+    hl = {
+      bg = 'grey2'
+    }
+  },
+  hl = {
+    bg = 'grey2',
+    fg = 'skyblue'
   }
 })
 
 -- File position
 table.insert(components.active[3], {
   provider = 'position',
-  left_sep = ' ',
+  left_sep = {
+    str = '',
+    hl = {
+      bg = 'grey2',
+      fg = 'fg'
+    }
+  },
   hl = {
-    fg = 'white'
+    fg = 'bg',
+    bg = 'fg'
   }
 })
 
 -- line percentage
 table.insert(components.active[3], {
   provider = 'line_percentage',
-  left_sep = ' ',
+  left_sep = {
+    str = ' ',
+    hl = {
+      bg = 'fg',
+      fg = 'bg'
+    }
+  },
   hl = {
-    fg = 'white'
+    fg = 'bg',
+    bg = 'fg'
   }
 })
 
@@ -182,7 +263,16 @@ table.insert(components.active[3], {
 table.insert(components.active[3], {
   provider = 'scroll_bar',
   reverse = false,
-  left_sep = ' '
+  left_sep = {
+    str = ' ',
+    hl = {
+      bg = 'fg'
+    }
+  },
+  hl = {
+    bg = 'fg',
+    fg = 'yellow'
+  }
 })
 
 require('feline').setup({

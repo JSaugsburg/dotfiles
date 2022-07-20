@@ -41,7 +41,8 @@ bspc rule -a firefox-esr:Toolkit sticky=on state=floating rectangle=800x600+4300
 # Hintergrundbild setzen
 #feh --bg-scale --no-xinerama ~/Bilder/Wallpaper/nightcity2dual.jpg
 #feh --bg-center ~/Bilder/Wallpaper/portal_to_another_world.png
-feh --bg-center ~/Bilder/Wallpaper/sun-line-2560×1440.jpg
+#feh --bg-center ~/Bilder/Wallpaper/sun-line-2560×1440.jpg
+feh --bg-fill ~/Bilder/Wallpaper/alena-aenami-autumn-in-budapest-1920×1080.jpg
 
 # Compositor
 picom -b --config ~/.config/picom/picom.conf

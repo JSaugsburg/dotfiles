@@ -5,6 +5,7 @@ return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'feline-nvim/feline.nvim'
   use 'kyazdani42/nvim-web-devicons'
+  use 'norcalli/nvim-colorizer.lua'
   use {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }

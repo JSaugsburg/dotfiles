@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-bspc rule -a St -o desktop='^1' state=floating rectangle=940x640+1615+36
+bspc rule -a St -o desktop='^1' state=floating follow=on rectangle=940x640+1615+36
 st -e "calcurse"
