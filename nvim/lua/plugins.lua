@@ -1,5 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
-return require('packer').startup(function()
+return require('packer').startup(function(use)
+  use 'wbthomason/packer.nvim'
   use 'sainnhe/gruvbox-material'
   use 'justinmk/vim-sneak'
   use 'christoomey/vim-tmux-navigator'
@@ -19,4 +20,5 @@ return require('packer').startup(function()
       require('gitsigns').setup()
     end
   }
+  use 'neovim/nvim-lspconfig'
 end)

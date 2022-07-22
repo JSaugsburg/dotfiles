@@ -1,13 +1,4 @@
 local vi_utils = require('feline.providers.vi_mode')
-local git_utils = require('feline.providers.git')
-
-local function git_exists()
-  if require('feline.providers.git').git_info_exists() then
-    return true
-  else
-    return false
-  end
-end
 
 local components = {
   active = {},
@@ -31,10 +22,6 @@ local colors = {
   fg = '#a89984',
   skyblue = '#7daea3',
   red = '#ea6962',
-}
-
-local default_git_hl = {
-  bg = colors.bg
 }
 
 -- active
