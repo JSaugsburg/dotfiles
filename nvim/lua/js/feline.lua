@@ -258,7 +258,7 @@ table.insert(components.active[3], {
   },
   hl = {
     bg = 'fg',
-    fg = 'yellow'
+    fg = 'black'
   }
 })
 
