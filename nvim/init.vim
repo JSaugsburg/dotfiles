@@ -1,12 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-"Plug 'hrsh7th/nvim-cmp'
-"Plug 'hrsh7th/cmp-buffer'
-"Plug 'hrsh7th/cmp-nvim-lsp'
-"Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-"Plug 'hrsh7th/cmp-nvim-lua'
-"Plug 'octaltree/cmp-look'
-"Plug 'hrsh7th/cmp-path'
-"Plug 'hrsh7th/cmp-calc'
 "Plug 'f3fora/cmp-spell'
 "Plug 'hrsh7th/cmp-emoji'
 Plug 'windwp/nvim-autopairs'
@@ -23,7 +15,7 @@ let g:loaded_perl_provider=0
 let g:loaded_ruby_provider=0
 
 " Node Pfad
-"let g:loaded_node_provider = '/home/sepp/.nvm/versions/node/v17.4.0/bin/node'
+let g:node_host_prog = '/home/sepp/.nvm/versions/node/v18.7.0/lib/node_modules/neovim/bin/cli.js'
 
 
 " cmp setting

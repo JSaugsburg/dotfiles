@@ -25,7 +25,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-calc'
   use 'hrsh7th/nvim-cmp'
+  use 'onsails/lspkind.nvim'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
+  use 'andersevenrud/cmp-tmux'
 end)

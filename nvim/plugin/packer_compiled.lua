@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/sepp/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-tmux"] = {
+    loaded = true,
+    path = "/home/sepp/.local/share/nvim/site/pack/packer/start/cmp-tmux",
+    url = "https://github.com/andersevenrud/cmp-tmux"
+  },
   cmp_luasnip = {
     loaded = true,
     path = "/home/sepp/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
