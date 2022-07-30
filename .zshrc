@@ -59,6 +59,7 @@ source "$HOME/Software/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # zsh-nvm
 #export NVM_LAZY_LOAD=true
 export NVM_NO_USE=true
+export NVM_COMPLETION=true
 source ~/Software/zsh-nvm/zsh-nvm.plugin.zsh
 # vim mode
 VIM_MODE_VICMD_KEY="jk"
