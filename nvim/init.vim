@@ -1,9 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 "Plug 'f3fora/cmp-spell'
 "Plug 'hrsh7th/cmp-emoji'
-Plug 'windwp/nvim-autopairs'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+"Plug 'windwp/nvim-autopairs'
 call  plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

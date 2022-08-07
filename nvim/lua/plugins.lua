@@ -29,6 +29,11 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'onsails/lspkind.nvim'
   use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
   use 'saadparwaiz1/cmp_luasnip'
   use 'andersevenrud/cmp-tmux'
+  use {
+    'windwp/nvim-autopairs',
+    config = function() require('nvim-autopairs').setup {} end
+  }
 end)
