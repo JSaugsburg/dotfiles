@@ -110,3 +110,4 @@ require('lspconfig')['rust_analyzer'].setup{
   }
 }
 require('lspconfig').awk_ls.setup{}
+require('lspconfig')['perlpls'].setup{}
