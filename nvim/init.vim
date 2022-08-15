@@ -56,6 +56,9 @@ nmap <leader><Space> :noh<cr>
 inoremap jk <esc>
 vnoremap jk <esc>
 
+" jump to end of line in insert mode
+inoremap <C-e> <End>
+
 " open nvim config file
 nmap <leader>vm :tabedit ~/.config/nvim/init.vim<cr>
 
