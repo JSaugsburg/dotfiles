@@ -26,6 +26,8 @@ map('n', '<leader>Q', ':qa<cr>')
 -- unhighlight
 map('n', '<leader><Space>', ':noh<cr>')
 
+-- Ans Ende der Zeile springen in Insert Mode
+map('i', '<C-e>', '<End>')
 ----
 ----' no swapfiles
 ----set nobackup
