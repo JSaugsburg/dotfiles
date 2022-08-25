@@ -43,13 +43,23 @@ return require('packer').startup({
         require('gitsigns').setup()
       end
     }
-    use 'neovim/nvim-lspconfig'
+    use {
+      'neovim/nvim-lspconfig',
+      config = function()
+        require('js.pluginconfigs.lspconfig')
+      end
+    }
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/cmp-calc'
-    use 'hrsh7th/nvim-cmp'
+    use {
+      'hrsh7th/nvim-cmp',
+      config = function()
+        require('js.pluginconfigs.cmp')
+      end
+    }
     use 'onsails/lspkind.nvim'
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
