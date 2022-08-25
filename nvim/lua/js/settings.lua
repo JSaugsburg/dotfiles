@@ -1,29 +1,40 @@
 local g = vim.g
-local bo = vim.bo
-local opt = vim.opt
+local o = vim.opt
 local cmd = vim.cmd
 
 
+o.termguicolors = true
+-- colorscheme
+vim.ui.gruvbox_material_background = 'hard'
+cmd('colorscheme gruvbox-material')
+-- 
+-- damit auch vim panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
+-- https://dev.to/serhatteker/tmux-vim-active-pane-focus-5378
+-- muss nach colorscheme gesetzt werden
+cmd('highlight Normal guibg=none ctermbg=none')
+cmd('highlight EndOfBuffer guibg=none ctermbg=none')
+
 -- keine swap files
-opt.swapfile = false
+o.swapfile = false
 -- Sets how many lines of history VIM has to remember
-opt.history = 500
+o.history = 500
 
 -- relative Zeilennummern
-opt.number = true 
-opt.relativenumber = true
---" underscore wird als word boundary anerkannt
-opt.iskeyword = opt.iskeyword - { "_" }
+o.number = true 
+o.relativenumber = true
+-- underscore wird als word boundary anerkannt
+o.iskeyword:remove("_")
 
---" nur 500ms bei keyinput warten (z.B. bei jk)
-opt.timeoutlen=500
-opt.ttimeoutlen=20
+-- nur 500ms bei keyinput warten (z.B. bei jk)
+o.timeoutlen=500
+o.ttimeoutlen=20
 
---" Enable filetype plugins
-cmd [[ filetype plugin on ]]
-cmd [[ filetype indent on ]]
 -- status text ausblenden -> kommt von Statusline
-opt.showmode = false
+o.showmode = false
 -- no backups
-opt.backup = false
-opt.writebackup = false
+o.backup = false
+o.writebackup = false
+
+-- Map leader
+g.mapleader = ','
+g.maplocalleader = ','
