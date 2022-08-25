@@ -18,7 +18,12 @@ return require('packer').startup({
       end
     }
     use 'kyazdani42/nvim-web-devicons'
-    use 'norcalli/nvim-colorizer.lua'
+    use {
+      'norcalli/nvim-colorizer.lua',
+      config = function()
+        require('colorizer').setup()
+      end
+    }
     use {
       'nvim-telescope/telescope.nvim', branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} },
