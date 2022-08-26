@@ -7,7 +7,7 @@ o.termguicolors = true
 -- colorscheme
 vim.ui.gruvbox_material_background = 'hard'
 cmd('colorscheme gruvbox-material')
--- 
+
 -- damit auch vim panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
 -- https://dev.to/serhatteker/tmux-vim-active-pane-focus-5378
 -- muss nach colorscheme gesetzt werden
@@ -34,6 +34,9 @@ o.showmode = false
 -- no backups
 o.backup = false
 o.writebackup = false
+
+-- mouse support -> bei tmux scroll nützlich
+o.mouse = 'nv'
 
 -- Map leader
 g.mapleader = ','
