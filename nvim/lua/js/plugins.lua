@@ -14,7 +14,7 @@ return require('packer').startup({
     use {
       'feline-nvim/feline.nvim',
       config = function()
-        require('js.pluginconfigs.feline') 
+        require('js.pluginconfigs.feline')
       end
     }
     use 'kyazdani42/nvim-web-devicons'
@@ -68,6 +68,11 @@ return require('packer').startup({
     use {
       'windwp/nvim-autopairs',
       config = function() require('nvim-autopairs').setup {} end
+    }
+    use {
+      'kyazdani42/nvim-tree.lua',
+      requires = { 'kyazdani42/nvim-web-devicons' },
+      config = function() require('nvim-tree').setup() end
     }
   end,
   config = {

@@ -25,9 +25,11 @@ map('n', '<leader>q', ':q<cr>')
 map('n', '<leader>Q', ':qa<cr>')
 -- unhighlight
 map('n', '<leader><Space>', ':noh<cr>')
-
 -- Ans Ende der Zeile springen in Insert Mode
 map('i', '<C-e>', '<End>')
+
+-- NVIMTREE
+map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 ----
 ----' no swapfiles
 ----set nobackup
