@@ -14,8 +14,9 @@ river/
 caddy/
 pulse/
 kitty/
-lutris/
 menus/
+heroic/
+lutris/
 *BACKUP*
 discord/
 gtk-2.0/
@@ -24,6 +25,7 @@ KeePass/
 spotify/
 calcurse/
 neofetch/
+legendary/
 cmus/cache
 cmus/lib.pl
 cmus/autosave
