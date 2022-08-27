@@ -41,3 +41,6 @@ o.mouse = 'nv'
 -- Map leader
 g.mapleader = ','
 g.maplocalleader = ','
+
+-- node host setzen
+g.node_host_prog = '/home/sepp/.nvm/versions/node/v16.16.0/bin/neovim-node-host'

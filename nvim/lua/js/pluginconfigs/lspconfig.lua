@@ -109,5 +109,7 @@ require('lspconfig')['rust_analyzer'].setup{
     ["rust-analyzer"] = {}
   }
 }
-require('lspconfig').awk_ls.setup{}
+require('lspconfig').awk_ls.setup{
+  cmd = { '/home/sepp/.nvm/versions/node/v16.16.0/bin/awk-language-server' }
+}
 require('lspconfig')['perlpls'].setup{}

@@ -28,6 +28,10 @@ map('n', '<leader><Space>', ':noh<cr>')
 -- Ans Ende der Zeile springen in Insert Mode
 map('i', '<C-e>', '<End>')
 
+-- leere Zeilen einfügen
+map('n', '<A-Enter>', 'O<Esc>j')
+map('n', '<cr>', 'o<Esc>k')
+
 -- NVIMTREE
 map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 ----
