@@ -61,7 +61,12 @@ return require('packer').startup({
       end
     }
     use 'onsails/lspkind.nvim'
-    use 'L3MON4D3/LuaSnip'
+    use {
+      'L3MON4D3/LuaSnip',
+      config = function()
+        require('luasnip.loaders.from_vscode').lazy_load()
+      end
+    }
     use 'rafamadriz/friendly-snippets'
     use 'saadparwaiz1/cmp_luasnip'
     use 'andersevenrud/cmp-tmux'
