@@ -56,3 +56,4 @@ scripts/openkpcx
 **/supervise/status
 spotify-tui/client.yml
 **/.spotify_token_cache.json
+nvim/plugin/packer_compiled.lua
