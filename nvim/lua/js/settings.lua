@@ -42,5 +42,9 @@ o.mouse = 'nv'
 g.mapleader = ','
 g.maplocalleader = ','
 
+-- vim-Rooter
+-- Bei Öfnnen eines Buffers wird automatisch in das Verzeichnis gewechselt
+g['rooter_cd_cmd'] = 'lcd'
+
 -- node host setzen
 g.node_host_prog = '/home/sepp/.nvm/versions/node/v16.16.0/bin/neovim-node-host'

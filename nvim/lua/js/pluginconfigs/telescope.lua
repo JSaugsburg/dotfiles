@@ -1,5 +1,6 @@
 local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
+local project = require('telescope').load_extension('repo')
 local A = vim.api
 
 require('telescope').setup({
@@ -28,6 +29,12 @@ require('telescope').setup({
       override_file_sorter = true, -- override the file sorter
       case_mode = 'smart_case', -- "smart_case" | "ignore_case" | "respect_case"
     },
+    repo = {
+      search_dirs = {
+        '~/Projects',
+        '~/.config'
+      },
+    }
   },
 })
 

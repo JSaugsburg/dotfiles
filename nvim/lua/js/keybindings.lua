@@ -16,6 +16,8 @@ map('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
 map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
+-- Workspace wechseln
+map('n', '<leader>fp', ":lua require'telescope'.extensions.project.project{}<cr>")
 
 -- Fast saving
 map('n', '<leader>s', ':w<cr>')

@@ -11,6 +11,7 @@ return require('packer').startup({
     use 'sainnhe/gruvbox-material'
     use 'justinmk/vim-sneak'
     use 'christoomey/vim-tmux-navigator'
+    use 'airblade/vim-rooter'
     use {
       'feline-nvim/feline.nvim',
       config = function()
@@ -31,6 +32,8 @@ return require('packer').startup({
         require('js.pluginconfigs.telescope')
       end
     }
+    use 'nvim-telescope/telescope-file-browser.nvim'
+    use 'cljoly/telescope-repo.nvim'
     use {
       'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
       config = function()
