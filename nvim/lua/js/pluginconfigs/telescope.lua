@@ -1,6 +1,5 @@
 local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
-local project = require('telescope').load_extension('repo')
 local A = vim.api
 
 require('telescope').setup({
@@ -32,9 +31,11 @@ require('telescope').setup({
     repo = {
       search_dirs = {
         '~/Projects',
-        '~/.config'
+        '~/.config',
+        '~/Software'
       },
     }
   },
 })
 
+require('telescope').load_extension('repo')

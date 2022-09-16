@@ -25,8 +25,8 @@ o.relativenumber = true
 -- underscore wird als word boundary anerkannt
 o.iskeyword:remove("_")
 
--- nur 500ms bei keyinput warten (z.B. bei jk)
-o.timeoutlen=500
+-- nur 350ms bei keyinput warten (z.B. bei jk)
+o.timeoutlen=350
 o.ttimeoutlen=20
 
 -- status text ausblenden -> kommt von Statusline

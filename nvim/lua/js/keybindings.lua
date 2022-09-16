@@ -17,7 +17,7 @@ map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
 map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
 -- Workspace wechseln
-map('n', '<leader>fp', ":lua require'telescope'.extensions.project.project{}<cr>")
+map('n', '<leader>fp', ":<cmd>Telescope repo list<cr>")
 
 -- Fast saving
 map('n', '<leader>s', ':w<cr>')
@@ -36,40 +36,14 @@ map('n', '<cr>', 'o<Esc>k')
 
 -- NVIMTREE
 map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
-----
-----' no swapfiles
-----set nobackup
-----set nowritebackup
-----
-----' coc configuration
-----'inoremap <silent><expr> <TAB>
-----'      \ pumvisible() ? '\<C-n>' :
-----'      \ <SID>check_back_space() ? '\<TAB>' :
-----'      \ coc#refresh()
-----'inoremap <expr><S-TAB> pumvisible() ? '\<C-p>' : '\<C-h>'
-----'
-----'function! s:check_back_space() abort
-----'  let col = col('.') - 1
-----'  return !col || getline('.')[col - 1]  =~# '\s'
-----'endfunction
-----'
-----'' Use K to show documentation in preview window.
-----'nnoremap <silent> K :call <SID>show_documentation()<CR>
-----'
-----'function! s:show_documentation()
-----'  if (index(['vim','help'], &filetype) >= 0)
-----'    execute 'h '.expand('<cword>')
-----'  elseif (coc#rpc#ready())
-----'    call CocActionAsync('doHover')
-----'  else
-----'    execute '!' . &keywordprg . ' ' . expand('<cword>')
-----'  endif
-----'endfunction
-----'
-----'' coc-snippets
-----'imap <C-t> <Plug>(coc-snippets-expand)
-----
-----' airline
-----let g:airline#extensions#tabline#enabled = 1
-----let g:airline_powerline_fonts = 1
-----
+
+-- Tabs navigieren
+map('n', '<leader>1', '1gt')
+map('n', '<leader>2', '2gt')
+map('n', '<leader>3', '3gt')
+map('n', '<leader>4', '4gt')
+map('n', '<leader>5', '5gt')
+map('n', '<leader>6', '6gt')
+map('n', '<leader>7', '7gt')
+map('n', '<leader>8', '8gt')
+map('n', '<leader>9', '9gt')
