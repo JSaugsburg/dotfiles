@@ -37,6 +37,10 @@ map('n', '<cr>', 'o<Esc>k')
 -- NVIMTREE
 map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 
+-- PACKER
+map('n', '<leader>pu', '<cmd>PackerSync<cr>')
+map('n', '<leader>pi', '<cmd>PackerInstall<cr>')
+
 -- Tabs navigieren
 map('n', '<leader>1', '1gt')
 map('n', '<leader>2', '2gt')

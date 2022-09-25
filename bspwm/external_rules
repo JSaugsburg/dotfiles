@@ -10,6 +10,10 @@ if [ "$instance" = Steam ] ; then
 	title=$(xtitle "$wid")
 	if [ "$title" = "Friends List" ] ; then
 		echo "split_ratio=0.85"
+	elif [[ "$title" =~ "Steam - News" ]]; then
+    echo "foo" >> "$logfile"
+		echo "state=floating"
+		echo "rectangle=800x600+2180+770"
 	elif [ "$title" != "Steam" ]; then
 		echo "state=floating"
 		echo "rectangle=800x600+2180+770"
