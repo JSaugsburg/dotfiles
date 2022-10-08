@@ -9,9 +9,8 @@ return require('packer').startup({
   function(use)
     use 'wbthomason/packer.nvim'
     use 'sainnhe/gruvbox-material'
-    use 'justinmk/vim-sneak'
+    use 'jpalardy/vim-slime'
     use 'christoomey/vim-tmux-navigator'
-    use 'airblade/vim-rooter'
     use {
       'feline-nvim/feline.nvim',
       config = function()

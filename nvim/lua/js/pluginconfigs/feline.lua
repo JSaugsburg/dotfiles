@@ -266,3 +266,5 @@ require('feline').setup({
     components = components,
     theme = colors
 })
+
+require('feline').winbar.setup()
