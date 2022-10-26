@@ -100,10 +100,9 @@ zle -N zle-line-init
 zle -N zle-line-finish
 
 # theme setzen
-SPACESHIP_VI_MODE_SHOW=false
-
-autoload -U promptinit; promptinit
-prompt spaceship
+#autoload -U promptinit; promptinit
+#prompt spaceship
+source "$HOME/Software/spaceship/spaceship.zsh"
 
 # git credential manager gpg
 export GCM_CREDENTIAL_STORE=gpg
