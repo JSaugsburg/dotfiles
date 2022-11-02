@@ -34,7 +34,8 @@ bspc rule -a Screenkey manage=off
 #bspc rule -a firefoxesr desktop='^5' follow=on
 bspc rule -a firefox-esr state=floating
 bspc rule -a Steam desktop='^3' state=tiled follow=off
-bspc rule -a steam_app_0 desktop='^6' state=fullscreen follow=on
+#bspc rule -a steam_app_0 desktop='^6' state=fullscreen follow=on
+#bspc rule -a dota2 desktop='^6' state=fullscreen follow=on
 bspc rule -a discord desktop='^4' state=tiled follow=on
 bspc rule -a Emacs desktop='^2' state=fullscreen follow=on
 bspc rule -a firefox-esr:Toolkit sticky=on state=floating rectangle=800x600+4300+820
