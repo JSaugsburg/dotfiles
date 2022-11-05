@@ -7,15 +7,16 @@ instance=$3
 consequences=$4
 
 if [ "$instance" = "Steam" ] ; then
-	title=$(xtitle "$wid")
-	if [ "$title" = "Friends List" ] ; then
-		echo "state=floating"
-		echo "rectangle=790x1230+1750+130"
-	elif [[ "$title" =~ "Steam - News" ]] ; then
-		echo "state=floating"
-		echo "rectangle=800x600+850+450"
-	elif [ "$title" != "Steam" ]; then
-		echo "state=floating"
+title=$(xtitle "$wid")
+if [ "$title" = "Friends List" ] ; then
+  echo "split_ratio=0.85"
+  #echo "state=floating"
+  #echo "rectangle=790x1230+1750+130"
+elif [[ "$title" =~ "Steam - News" ]] ; then
+  echo "state=floating"
+  echo "rectangle=800x600+850+450"
+elif [ "$title" != "Steam" ]; then
+  echo "state=floating"
 		echo "rectangle=800x600+850+450"
 	fi
 elif [[ "$class" =~ "steam_app" ]] ; then
@@ -24,10 +25,10 @@ elif [[ "$class" =~ "steam_app" ]] ; then
   echo "follow=on"
 fi
 
-#{
-#  echo "ID: $wid"
-#  echo "CLASS: $class"
-#  echo "INSTANCE: $instance"
-#  echo "TITLE: $title"
-#  echo "CONSEQUENCES: $consequences"
-#} >> "$logfile"
+{
+  echo "ID: $wid"
+  echo "CLASS: $class"
+  echo "INSTANCE: $instance"
+  echo "TITLE: $title"
+  echo "CONSEQUENCES: $consequences"
+} >> "$logfile"

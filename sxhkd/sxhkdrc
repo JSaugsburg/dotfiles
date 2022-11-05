@@ -1,4 +1,3 @@
-#
 # wm independent hotkeys
 #
 
@@ -98,8 +97,8 @@ super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+super + ctrl + {m,x,y,z,h}
+	bspc node -g {marked,locked,sticky,private,hidden}
 
 #
 # focus/swap
@@ -139,7 +138,7 @@ super + shift + {1-9,0}
 	bspc node -d '^{1-9,10}' --follow
 
 # focus or send to the given desktop
-super + {_,ctrl + }{1-9,0}
+super + {_,alt + ctrl + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 #
 # preselect
