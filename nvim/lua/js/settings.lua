@@ -5,8 +5,11 @@ local cmd = vim.cmd
 
 o.termguicolors = true
 -- colorscheme
-vim.ui.gruvbox_material_background = 'hard'
-cmd('colorscheme gruvbox-material')
+--vim.ui.gruvbox_material_background = 'hard'
+--cmd('colorscheme gruvbox-material')
+--cmd('colorscheme tokyonight')
+--cmd('colorscheme gruvbox-baby')
+cmd('colorscheme onedark')
 
 -- damit auch vim panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
 -- https://dev.to/serhatteker/tmux-vim-active-pane-focus-5378
@@ -20,7 +23,7 @@ o.swapfile = false
 o.history = 500
 
 -- relative Zeilennummern
-o.number = true 
+o.number = true
 o.relativenumber = true
 -- underscore wird als word boundary anerkannt
 o.iskeyword:remove("_")

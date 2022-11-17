@@ -8,7 +8,22 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 return require('packer').startup({
   function(use)
     use 'wbthomason/packer.nvim'
-    use 'sainnhe/gruvbox-material'
+    --use {
+    --  'folke/tokyonight.nvim',
+    --  config = function ()
+    --    require('tokyonight').setup({
+    --      style = 'moon'
+    --    })
+    --  end
+    --}
+    --use 'sainnhe/gruvbox-material'
+    --use 'luisiacc/gruvbox-baby'
+    use {
+      'navarasu/onedark.nvim',
+      config = function()
+        require('js.pluginconfigs.onedark')
+      end
+    }
     use 'jpalardy/vim-slime'
     use 'christoomey/vim-tmux-navigator'
     use {

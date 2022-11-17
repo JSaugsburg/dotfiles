@@ -5,25 +5,45 @@ local components = {
   inactive = {}
 }
 
-local colors = {
-  --bg = '#282828',
-  bg = '#3c3836',
-  black = '#1d2021',
-  grey = '#7c6f64',
-  grey2 = '#665c54',
-  yellow = '#d8a657',
-  cyan = '#89b482',
-  oceanblue = '#45707a',
-  green = '#a9b665',
-  orange = '#e78a4e',
-  violet = '#d3869b',
-  magenta = '#c14a4a',
-  white = '#ebdbb2',
-  fg = '#a89984',
-  skyblue = '#7daea3',
-  red = '#ea6962',
-}
+-- GRUVBOX-MATERIAL
+--local colors = {
+--  --bg = '#282828',
+--  bg = '#3c3836',
+--  fg = '#a89984',
+--  black = '#1d2021',
+--  grey = '#7c6f64',
+--  grey2 = '#665c54',
+--  yellow = '#d8a657',
+--  cyan = '#89b482',
+--  oceanblue = '#45707a',
+--  green = '#a9b665',
+--  orange = '#e78a4e',
+--  violet = '#d3869b',
+--  magenta = '#c14a4a',
+--  white = '#ebdbb2',
+--  skyblue = '#7daea3',
+--  red = '#ea6962',
+--}
 
+-- ONEDARK
+local colors = {
+  fg        = '#abb2bf',
+  bg        = '#282c34',
+  black     = '#1e2127',
+  white     = '#abb2bf',
+  grey      = '#5c6370',
+  grey2     = '#3b3f4c',
+  red       = '#e06c75',
+  magenta   = '#be5046',
+  green     = '#98c379',
+  yellow    = '#e5c07b',
+  orange    = '#d19a66',
+  blue      = '#61afef',
+  cyan      = '#56b6c2',
+  oceanblue = '#3b84c0',
+  skyblue   = '#3c909b',
+  violet    = '#c678dd',
+}
 -- active
 table.insert(components.active, {})
 table.insert(components.active, {})
