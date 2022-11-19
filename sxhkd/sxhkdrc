@@ -39,11 +39,13 @@ super + numbersign
 
 # next Song
 XF86AudioNext
+	playerctl next
 	spt pb -n
 
 # previous Song
 XF86AudioPrev
-	spt pb -pp
+	playerctl previous
+	#spt pb -pp
 
 # to beginning of Song
 shift + XF86AudioPrev
@@ -51,7 +53,8 @@ shift + XF86AudioPrev
 
 # Pause/Play
 XF86AudioPlay
-	spt pb -t
+	playerctl play-pause
+	#spt pb -t
 
 # make a screenshot
 Print
