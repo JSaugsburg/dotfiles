@@ -114,3 +114,6 @@ require('lspconfig').awk_ls.setup{
 }
 require('lspconfig')['perlpls'].setup{}
 require('lspconfig')['bashls'].setup{}
+require('lspconfig')['omnisharp'].setup{
+  cmd = { "dotnet", "/home/sepp/Software/Omnisharp/OmniSharp.dll" },
+}
