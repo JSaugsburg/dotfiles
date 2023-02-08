@@ -1,6 +1,6 @@
 *
 !cmus
-!nvim/
+!nvim/*
 !rofi
 !tmux
 !bspwm
