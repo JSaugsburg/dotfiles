@@ -1,6 +1,0 @@
-#!/bin/sh
-#export USER="sepp"
-#export HOME="/home/sepp"
-#groups="$(id -Gn "$USER" | tr ' ' ':')"
-HOME="/home/sepp" exec chpst -u sepp spotifyd --no-daemon --config-path "/home/sepp/.config/spotifyd/spotifyd.conf" 2>&1
-#exec spotifyd --no-daemon --verbose --config-path "/home/sepp/.config/spotifyd/spotifyd.conf" 2>&1

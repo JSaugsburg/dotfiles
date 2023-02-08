@@ -1,9 +1,12 @@
 *
 !cmus
 !nvim
+!rofi
 !tmux
 !bspwm
+!sxhkd
 !picom
 !polybar
+!scripts
 !pipewire
 !starshipt.toml
