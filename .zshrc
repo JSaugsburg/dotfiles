@@ -121,5 +121,6 @@ export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 export DOTNET_CLI_TELEMETRY_OPTOUT="1"
 
-# arcgis
-export RUNTIMELOCALSERVER_100_15=$HOME/arcgis/localserver100.15
+# Deno
+export DENO_INSTALL="/home/sepp/Software/deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
