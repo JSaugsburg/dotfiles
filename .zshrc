@@ -112,15 +112,7 @@ export GCM_CREDENTIAL_STORE=gpg
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
-eval "$(starship init zsh)"
 # add rakudo to PATH
 export PATH=/home/sepp/Software/rakudo/bin:/home/sepp/Software/rakudo/share/perl6/site/bin:/home/sepp/Software/rakudo/share/perl6/vendor/bin:/home/sepp/Software/rakudo/share/perl6/core/bin:$PATH
 
-# dotnet
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
-export DOTNET_CLI_TELEMETRY_OPTOUT="1"
-
-# Deno
-export DENO_INSTALL="/home/sepp/Software/deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+eval "$(starship init zsh)"
