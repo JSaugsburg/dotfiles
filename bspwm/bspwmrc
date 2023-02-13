@@ -100,3 +100,4 @@ pgrep -x check_current_sink > /dev/null
 if [ $? -eq 1 ];
 	then check_current_sink &
 fi
+hellp
