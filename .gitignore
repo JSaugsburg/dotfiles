@@ -32,3 +32,4 @@ weechat/
 sv/
 tmux/plugins/
 greenclip.toml
+packer_compiled.lua

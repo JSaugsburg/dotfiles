@@ -12,6 +12,8 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "lunar"
+-- lvim.colorscheme = "zepyr"
+-- lvim.colorscheme = "onedark"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -25,6 +27,9 @@ lvim.keys.normal_mode["<leader>q"] = ":q<cr>"
 lvim.keys.normal_mode["<leader>Q"] = ":qa<cr>"
 -- unhighlight
 lvim.keys.normal_mode["<leader><Space>"] = ":noh<cr>"
+-- escape visual or normal mode with 'jk'
+lvim.keys.insert_mode["jk"] = "<esc>"
+lvim.keys.visual_mode["jk"] = "<esc>"
 --lvim.keys.normal_mode["<C-h>"] = false
 --lvim.keys.normal_mode["<C-j>"] = false
 --lvim.keys.normal_mode["<C-k>"] = false
@@ -39,7 +44,7 @@ lvim.keys.normal_mode["<leader><Space>"] = ":noh<cr>"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
--- local _, actions = pcall(require, "telescope.actions")
+-- ybpny _, npgvbaf = cpnyy(erdhver, "gryrfpbcr.npgvbaf")
 -- lvim.builtin.telescope.defaults.mappings = {
 --   -- for input mode
 --   i = {
@@ -179,15 +184,19 @@ lvim.plugins = {
   ---  "folke/trouble.nvim",
   ---  cmd = "TroubleToggle",
   ---},
-  { "christoomey/vim-tmux-navigator" }
+  { "christoomey/vim-tmux-navigator" },
+  {
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup {
+        mapping = { "jk" },
+      }
+    end,
+  },
+  { "glepnir/zephyr-nvim" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- vim.api.nvim_create_autocmd("BufEnter", {
---   pattern = { "*.json", "*.jsonc" },
---   -- enable wrap mode for json files only
---   command = "setlocal wrap",
--- })
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "zsh",
 --   callback = function()
@@ -195,3 +204,8 @@ lvim.plugins = {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+-- Highlight settings
+-- damit auch vim tmux panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
+vim.api.nvim_create_autocmd("ColorScheme", {
+  command = "highlight Normal guibg=none ctermbg=none",
+})
