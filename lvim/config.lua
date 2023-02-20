@@ -16,6 +16,8 @@ lvim.colorscheme = "lunar"
 -- lvim.colorscheme = "onedark"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
+-- underscore wird als word boundary anerkannt
+vim.opt.iskeyword:remove("_")
 
 lvim.leader = ","
 -- add your own keymapping
@@ -30,6 +32,11 @@ lvim.keys.normal_mode["<leader><Space>"] = ":noh<cr>"
 -- escape visual or normal mode with 'jk'
 lvim.keys.insert_mode["jk"] = "<esc>"
 lvim.keys.visual_mode["jk"] = "<esc>"
+-- Ans Ende der Zeile springen in Insert Mode
+lvim.keys.insert_mode["<C-e>"] = "<End>"
+-- leere Zeilen einfügen
+lvim.keys.normal_mode["<A-Enter>"] = "O<Esc>j"
+lvim.keys.normal_mode["<cr>"] = "o<Esc>k"
 --lvim.keys.normal_mode["<C-h>"] = false
 --lvim.keys.normal_mode["<C-j>"] = false
 --lvim.keys.normal_mode["<C-k>"] = false

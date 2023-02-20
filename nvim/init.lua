@@ -1,6 +1,8 @@
+-- bootstrap nvim
 local function clone_paq()
   local path = vim.fn.stdpath("data") .. "/site/pack/paqs/start/paq-nvim"
-  local is_installed = vim.fn.empty(vim.fn.glob(path)) > 0
+  --local is_installed = vim.fn.empty(vim.fn.glob(path)) > 0
+  local is_installed = vim.fn.isdirectory(path) > 0
   if not is_installed then
     vim.fn.system { "git", "clone", "--depth=1", "https://github.com/savq/paq-nvim.git", path }
     return true
@@ -23,7 +25,9 @@ end
 -- Call helper function
 bootstrap_paq {
   "savq/paq-nvim",
-  "sainnhe/gruvbox-material",
+  -- List your packages
+  "navarasu/onedark.nvim",
+  "christoomey/vim-tmux-navigator"
 }
 --  use {
 --    'navarasu/onedark.nvim',
@@ -33,7 +37,7 @@ bootstrap_paq {
 --  }
 --  use 'jpalardy/vim-slime'
 --  use 'christoomey/vim-tmux-navigator'
---  use {
+--  use {is_installed = vim.fn.empty(vim.fn.glob(path)) > 0
 --    'feline-nvim/feline.nvim',
 --    config = function()
 --      require('js.pluginconfigs.feline')
