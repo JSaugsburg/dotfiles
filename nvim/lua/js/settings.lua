@@ -50,3 +50,4 @@ g.node_host_prog = '/home/sepp/.nvm/versions/node/v16.16.0/bin/neovim-node-host'
 
 -- slime target ist tmux
 g['slime_target'] = 'tmux'
+require("js.pluginsetup.mason")
