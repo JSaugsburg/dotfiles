@@ -1,36 +1,28 @@
--- bootstrap nvim
-local function clone_paq()
-  local path = vim.fn.stdpath("data") .. "/site/pack/paqs/start/paq-nvim"
-  --local is_installed = vim.fn.empty(vim.fn.glob(path)) > 0
-  local is_installed = vim.fn.isdirectory(path) > 0
-  if not is_installed then
-    vim.fn.system { "git", "clone", "--depth=1", "https://github.com/savq/paq-nvim.git", path }
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
+    vim.cmd [[packadd packer.nvim]]
     return true
   end
+  return false
 end
 
-local function bootstrap_paq(packages)
-  local first_install = clone_paq()
-  vim.cmd.packadd("paq-nvim")
-  local paq = require("paq")
-  if first_install then
-    vim.notify("Installing plugins... If prompted, hit Enter to continue.")
-  end
+local packer_bootstrap = ensure_packer()
 
-  -- Read and install packages
-  paq(packages)
-  paq.install()
-end
-
--- Call helper function
-bootstrap_paq {
-  "savq/paq-nvim",
+return require("packer").startup(function(use)
+  use "wbthomason/packer.nvim"
   -- List your packages
-  "navarasu/onedark.nvim",
-  "christoomey/vim-tmux-navigator",
-  "williamboman/mason.nvim",
-}
-require("mason").setup()
+  use "navarasu/onedark.nvim"
+  use "christoomey/vim-tmux-navigator"
+  use "williamboman/mason.nvim"
+
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require("packer").sync()
+  end
+end)
 ---- Automatically run :PackerCompile whenever plugins.lua is updated with an autocommand:
 --vim.api.nvim_create_autocmd('BufWritePost', {
 --    group = vim.api.nvim_create_augroup('PACKER', { clear = true }),
