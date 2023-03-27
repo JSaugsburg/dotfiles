@@ -77,7 +77,7 @@ require('lspconfig')['pyright'].setup{
   on_attach = on_attach,
   flags = lsp_flags
 }
-require('lspconfig')['sumneko_lua'].setup{
+require('lspconfig')['lua_ls'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
   settings = {
@@ -116,4 +116,7 @@ require('lspconfig')['perlpls'].setup{}
 require('lspconfig')['bashls'].setup{}
 require('lspconfig')['omnisharp'].setup{
   cmd = { "dotnet", "/home/sepp/Software/Omnisharp/OmniSharp.dll" },
+}
+require("lspconfig")["raku_navigator"].setup{
+  cmd = { "node", "~/.local/share/nvim/mason/packages/raku-navigator/server/out/server.js", "--stdio" },
 }

@@ -3,13 +3,6 @@ local o = vim.opt
 local cmd = vim.cmd
 
 
-o.termguicolors = true
--- colorscheme
---vim.ui.gruvbox_material_background = 'hard'
---cmd('colorscheme gruvbox-material')
---cmd('colorscheme tokyonight')
---cmd('colorscheme gruvbox-baby')
-cmd('colorscheme onedark')
 
 -- damit auch vim panes aktiv / inaktiv unterschieden wird muss none bei guibg stehen
 -- https://dev.to/serhatteker/tmux-vim-active-pane-focus-5378
@@ -51,3 +44,4 @@ g.node_host_prog = '/home/sepp/.nvm/versions/node/v16.16.0/bin/neovim-node-host'
 -- slime target ist tmux
 g['slime_target'] = 'tmux'
 require("js.pluginsetup.mason")
+-- require'alpha'.setup(require'alpha.themes.dashboard'.config)
