@@ -115,4 +115,6 @@ export GCM_CREDENTIAL_STORE=gpg
 # add rakudo to PATH
 export PATH=/home/sepp/Software/rakudo/bin:/home/sepp/Software/rakudo/share/perl6/site/bin:/home/sepp/Software/rakudo/share/perl6/vendor/bin:/home/sepp/Software/rakudo/share/perl6/core/bin:$PATH
 
+export WLR_NO_HARDWARE_CURSORS=1
+
 eval "$(starship init zsh)"
