@@ -36,3 +36,6 @@ greenclip.toml
 packer_compiled.lua
 nvim/lazy-lock.json
 nvim/lua/.luarc.json
+.mono/
+libfm/
+pcmanfm/
