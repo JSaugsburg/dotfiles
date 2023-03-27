@@ -1,3 +1,4 @@
+vim.opt.termguicolors = true
 local vi_utils = require('feline.providers.vi_mode')
 
 local components = {

@@ -1,35 +1,44 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
-end
-
-local packer_bootstrap = ensure_packer()
-
-return require("packer").startup(function(use)
-  use "wbthomason/packer.nvim"
-  -- List your packages
-  use "navarasu/onedark.nvim"
-  use "christoomey/vim-tmux-navigator"
-  use "williamboman/mason.nvim"
-
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require("packer").sync()
-  end
-end)
----- Automatically run :PackerCompile whenever plugins.lua is updated with an autocommand:
---vim.api.nvim_create_autocmd('BufWritePost', {
---    group = vim.api.nvim_create_augroup('PACKER', { clear = true }),
---    pattern = 'plugins.lua',
---    command = 'source <afile> | PackerCompile',
---})
---
+require("lazy").setup({
+  { 
+    "navarasu/onedark.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("js.pluginsetup.onedark")
+    end
+  },
+  "christoomey/vim-tmux-navigator",
+  "williamboman/mason.nvim",
+  "williamboman/mason-lspconfig.nvim",
+  { 
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("js.pluginsetup.lspconfig")
+    end
+  },
+  { 
+    "freddiehaddad/feline.nvim",
+    dependencies = {
+      "kyazdani42/nvim-web-devicons"
+    },
+    config = function()
+      require("js.pluginsetup.feline")
+    end
+  }
+  ,
+  {
+    "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require('js.pluginsetup.treesitter')
+    end
+}
+  --{
+  --  "goolord/alpha-nvim", config = function ()
+  --    require("js.pluginsetup.alpha-nvim")
+  --      -- require'alpha'.setup(require'alpha.themes.dashboard'.config)
+  --  end
+  --}
+})
 --return require('packer').startup({
 --  function(use)
 --    use 'wbthomason/packer.nvim'

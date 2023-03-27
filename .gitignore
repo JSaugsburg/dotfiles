@@ -34,3 +34,5 @@ sv/
 tmux/plugins/
 greenclip.toml
 packer_compiled.lua
+nvim/lazy-lock.json
+nvim/lua/.luarc.json
