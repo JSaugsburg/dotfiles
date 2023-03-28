@@ -113,6 +113,10 @@ export GCM_CREDENTIAL_STORE=gpg
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
+# GO PATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # add rakudo to PATH
 export PATH=/home/sepp/Software/rakudo/bin:/home/sepp/Software/rakudo/share/perl6/site/bin:/home/sepp/Software/rakudo/share/perl6/vendor/bin:/home/sepp/Software/rakudo/share/perl6/core/bin:$PATH
 
