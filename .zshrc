@@ -18,6 +18,7 @@ alias polyconf="vim ~/.config/polybar/config.ini"
 alias polyscripts="cd ~/.config/polybar/scripts"
 alias vimrc="vim ~/.config/nvim/init.vim"
 alias vim="/usr/bin/nvim"
+alias keepass="/usr/bin/mono ~/Software/keepass/KeePass.exe"
 
 # # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
