@@ -44,7 +44,7 @@ actions[logout]="loginctl terminate-session ${XDG_SESSION_ID-}"
 actions[suspend]="loginctl suspend"
 actions[hibernate]="loginctl hibernate"
 actions[reboot]="sudo reboot"
-actions[shutdown]="sudo shutdown -h now"
+actions[shutdown]="sudo shutdown"
 
 # By default, ask for confirmation for actions that are irreversible
 confirmations=(reboot shutdown logout)

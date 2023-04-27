@@ -70,17 +70,17 @@ killall spotifyd
 spotifyd --no-daemon &
 
 # autostart st
-bspc rule -a st --one-shot desktop='^1'
+bspc rule -a St --one-shot desktop='^1'
 pgrep -x st > /dev/null
 if [ $? -eq 1 ];
 	then st -e tmux &
 fi
 
 # autostart firefox
-bspc rule -a firefox-esr --one-shot desktop='^5' state=fullscreen
-pgrep -x firefox-esr > /dev/null
+bspc rule -a firefox --one-shot desktop='^5' state=fullscreen
+pgrep -x firefox > /dev/null
 if [ $? -eq 1 ];
-	then firefox-esr &
+	then firefox &
 fi
 
 # start spotifyd
@@ -100,4 +100,9 @@ pgrep -x check_current_sink > /dev/null
 if [ $? -eq 1 ];
 	then check_current_sink &
 fi
-hellp
+
+setxkbmap -layout de -variant nodeadkeys
+numlockx on
+#/usr/bin/pipewire &
+#/usr/bin/pipewire-pulse &
+#/usr/bin/wireplumber

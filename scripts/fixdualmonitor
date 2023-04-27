@@ -1,8 +1,8 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 connect_second_monitor () {
 	i=0
-	status=$(xrandr | grep "DP-4" | cut -d" " -f2)
+	status=$(xrandr | grep "DP-1" | cut -d" " -f2)
 	while [ $status = "disconnected" ]
 	do
 	if [ $i -gt 5 ]; then
@@ -10,11 +10,11 @@ connect_second_monitor () {
 		exit 1
 	else
 		sleep 1
-		status=$(xrandr | grep "DP-4" | cut -d" " -f2)
+		status=$(xrandr | grep "DP-1" | cut -d" " -f2)
 		i=$(( i + 1))
 	fi
 	done
-	xrandr --output DP-4 --auto --output DP-0 --auto --panning 2560x1440 --left-of DP-4
+	xrandr --output DP-1 --auto --output DP-3 --auto --panning 2560x1440 --left-of DP-1
 
 	exit 0
 }

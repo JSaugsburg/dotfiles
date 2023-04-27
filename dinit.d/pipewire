@@ -1,0 +1,5 @@
+type            = process
+command         = /usr/bin/pipewire
+smooth-recovery = true
+logfile         = /tmp/pipewire.log
+waits-for       = loginready

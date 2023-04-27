@@ -1,4 +1,6 @@
+.luarc.json
 GIMP/
+mozilla/
 mono/
 KeePass/
 QtProject.conf
