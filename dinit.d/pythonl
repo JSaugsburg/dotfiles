@@ -1,5 +1,0 @@
-type            = process
-command         = /home/sepp/test.py
-smooth-recovery = true
-logfile         = /tmp/test.log
-waits-for       = loginready

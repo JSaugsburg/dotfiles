@@ -2,6 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+fixdualmonitor
 # check ob ein oder beide Monitore angeschlossen sind
 monitors=$(bspc query -M --names | wc -l)
 if [ $monitors -eq 2 ]; then
@@ -32,13 +33,13 @@ bspc rule -a KeePassXC state=floating center=on
 bspc rule -a KeePass2 state=floating center=on
 bspc rule -a Screenkey manage=off
 #bspc rule -a firefoxesr desktop='^5' follow=on
-bspc rule -a firefox-esr state=floating
+bspc rule -a firefox state=floating
 bspc rule -a Steam desktop='^3' state=tiled follow=off
 #bspc rule -a steam_app_0 desktop='^6' state=fullscreen follow=on
 #bspc rule -a dota2 desktop='^6' state=fullscreen follow=on
 bspc rule -a discord desktop='^4' state=tiled follow=on
 bspc rule -a Emacs desktop='^2' state=fullscreen follow=on
-bspc rule -a firefox-esr:Toolkit sticky=on state=floating rectangle=800x600+4300+820
+bspc rule -a firefox:Toolkit sticky=on state=floating rectangle=800x600+4300+820
 
 
 steamlib=~/.local/share/Steam/steamapps    # path to your steamlibrary
@@ -77,7 +78,7 @@ if [ $? -eq 1 ];
 fi
 
 # autostart firefox
-bspc rule -a firefox --one-shot desktop='^5' state=fullscreen
+bspc rule -a firefox --one-shot desktop='^5' state=tiled
 pgrep -x firefox > /dev/null
 if [ $? -eq 1 ];
 	then firefox &
@@ -101,8 +102,8 @@ if [ $? -eq 1 ];
 	then check_current_sink &
 fi
 
-setxkbmap -layout de -variant nodeadkeys
+#setxkbmap -layout de -variant nodeadkeys
 numlockx on
-#/usr/bin/pipewire &
-#/usr/bin/pipewire-pulse &
-#/usr/bin/wireplumber
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/wireplumber &

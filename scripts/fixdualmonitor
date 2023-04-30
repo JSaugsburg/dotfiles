@@ -14,7 +14,7 @@ connect_second_monitor () {
 		i=$(( i + 1))
 	fi
 	done
-	xrandr --output DP-1 --auto --output DP-3 --auto --panning 2560x1440 --left-of DP-1
+	xrandr --output DP-1 --auto --output DP-3 --auto --panning 2560x1440 --left-of DP-1 --primary
 
 	exit 0
 }
